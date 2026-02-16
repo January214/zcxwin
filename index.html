@@ -5,218 +5,241 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Erwin Bolhano | Healthcare Operations Professional</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 /* --- Reset --- */
 * {margin:0; padding:0; box-sizing:border-box;}
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    scroll-behavior: smooth;
-    color:#2c3e50;
-    overflow-x:hidden;
-}
-
-/* --- Background Canvas --- */
-#background {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    background:#eef3f9;
+    font-family: 'Inter', sans-serif;
+    background:#f4f7fb;
+    color:#1f2d3d;
+    scroll-behavior:smooth;
 }
 
 /* --- Navigation --- */
 nav {
-    background:#0a3d62;
-    padding:15px;
+    background:#ffffff;
+    padding:20px 60px;
     position:fixed;
     width:100%;
     top:0;
-    text-align:center;
-    z-index:10;
-}
-
-nav a {
-    color:white;
-    margin:0 25px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-nav a:hover {text-decoration:underline;}
-
-/* --- Sections --- */
-section {
-    padding:120px 20px;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* --- HOME (Executive Layout) --- */
-#home {
-    padding-top:140px;
-    min-height:100vh;
     display:flex;
+    justify-content:space-between;
     align-items:center;
-    justify-content:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:100;
 }
 
-.home-container {
-    display:flex;
-    align-items:center;
-    gap:60px;
-    flex-wrap:wrap;
-}
-
-.home-image img {
-    width:380px;
-    height:380px;
-    object-fit:cover;
-    border-radius:10px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.15);
-}
-
-.home-text {
-    flex:1;
-    min-width:320px;
-}
-
-.home-text h1 {
-    font-size:52px;
+nav .logo {
     font-weight:800;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.highlight {
+    font-size:18px;
+    letter-spacing:1px;
     color:#0a3d62;
 }
 
-.intro {
-    font-size:20px;
+nav a {
+    margin-left:30px;
+    text-decoration:none;
+    color:#34495e;
     font-weight:600;
-    margin-bottom:25px;
+    font-size:14px;
+    letter-spacing:0.5px;
+}
+
+nav a:hover {color:#0a3d62;}
+
+/* --- Sections --- */
+section {
+    padding:140px 60px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* --- HERO SECTION --- */
+#home {
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.hero-text {
+    flex:1;
+}
+
+.hero-text h1 {
+    font-size:64px;
+    font-weight:800;
+    line-height:1.05;
+    margin-bottom:30px;
+    color:#0a3d62;
+}
+
+.hero-text h2 {
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:30px;
+    color:#5c6b7a;
+}
+
+.hero-text p {
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:20px;
+    max-width:600px;
     color:#34495e;
 }
 
-.home-text p {
-    font-size:18px;
-    line-height:1.7;
-    margin-bottom:18px;
+.cta-btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 30px;
+    background:#0a3d62;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    transition:0.3s ease;
 }
 
-/* --- Cards --- */
+.cta-btn:hover {
+    background:#062c47;
+}
+
+/* --- HERO IMAGE --- */
+.hero-image img {
+    width:420px;
+    height:420px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* --- SECTION TITLES --- */
+section h2 {
+    font-size:34px;
+    font-weight:800;
+    margin-bottom:50px;
+    color:#0a3d62;
+}
+
+/* --- CARDS --- */
 .card {
     background:white;
-    padding:25px;
-    margin:20px 0;
+    padding:35px;
     border-radius:10px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
-.card h3 {margin-bottom:10px;}
-
-ul {margin:10px 0 0 20px; line-height:1.6;}
-
-/* --- Contact --- */
-.contact-logos {
-    display:flex;
-    gap:40px;
-    justify-content:center;
-    margin-top:30px;
+.card h3 {
+    font-size:20px;
+    margin-bottom:15px;
 }
 
-.contact-logos img {
-    width:60px;
-    height:60px;
-    transition:0.3s;
+.card p {
+    font-size:16px;
+    line-height:1.7;
+    color:#4a5a6a;
 }
 
-.contact-logos img:hover {
-    transform:scale(1.2);
+ul {
+    margin-top:15px;
+    padding-left:20px;
+    line-height:1.8;
+    color:#4a5a6a;
 }
 
-/* --- Footer --- */
+/* --- CONTACT --- */
+.contact-section {
+    text-align:center;
+}
+
+.contact-section p {
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.contact-links a {
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:600;
+    color:#0a3d62;
+}
+
+/* --- FOOTER --- */
 footer {
     text-align:center;
-    padding:40px 0;
+    padding:40px;
+    background:#ffffff;
     font-size:14px;
-    color:#555;
+    color:#7b8a97;
 }
+
 </style>
 </head>
-
 <body>
 
-<canvas id="background"></canvas>
-
-<!-- Navigation -->
+<!-- NAVIGATION -->
 <nav>
-    <a href="#home">Home</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
+    <div class="logo">ERWIN BOLHANO</div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
-<!-- HOME -->
+<!-- HERO -->
 <section id="home">
-    <div class="home-container">
 
-        <div class="home-image">
-            <img src="images/profile.jpg.jpg" alt="Erwin Bolhano">
-        </div>
+    <div class="hero-text">
+        <h1>Your Operations<br>Are My Priority.</h1>
 
-        <div class="home-text">
-            <h1>
-                Healthcare Operations <span class="highlight">Professional</span>
-            </h1>
+        <h2>Healthcare Administrative & Insurance Operations Professional</h2>
 
-            <p class="intro">
-                Precision. Compliance. Operational Efficiency.
-            </p>
+        <p>
+            I support healthcare and dental organizations by ensuring operational precision in insurance verification, claims management, and compliant documentation processes.
+        </p>
 
-            <p>
-                I specialize in insurance verification, claims management, and healthcare administrative support where accuracy and timeliness directly impact both patient experience and revenue performance.
-            </p>
+        <p>
+            With hands-on experience across eligibility verification, prior authorizations, claims lifecycle monitoring, and provider coordination, I help practices reduce billing discrepancies, improve turnaround times, and strengthen revenue cycle stability.
+        </p>
 
-            <p>
-                With hands-on experience in dental and healthcare operations, I ensure accurate eligibility verification, prior authorization processing, claims follow-up, and compliant documentation management across remote and hybrid environments.
-            </p>
-
-            <p>
-                Known for structured workflow management, clear communication, and attention to detail, I help healthcare organizations reduce billing errors, improve turnaround times, and maintain operational consistency.
-            </p>
-
-        </div>
-
+        <a href="#contact" class="cta-btn">Let’s Connect</a>
     </div>
+
+    <div class="hero-image">
+        <img src="images/profile.jpg.jpg" alt="Erwin Bolhano">
+    </div>
+
 </section>
 
 <!-- EXPERTISE -->
 <section id="expertise">
-    <h2>Core Expertise</h2>
+    <h2>Core Capabilities</h2>
 
     <div class="card">
-        <h3>Administrative Coordination</h3>
-        <p>Workflow management, scheduling, documentation control, and remote operational support.</p>
+        <h3>Insurance & Revenue Cycle Support</h3>
+        <p>Eligibility verification, benefits investigation, prior authorizations, claims follow-up, and appeals coordination.</p>
     </div>
 
     <div class="card">
-        <h3>Healthcare & Insurance Operations</h3>
-        <p>Eligibility & benefits verification, prior authorizations, claims lifecycle follow-up, and revenue cycle fundamentals.</p>
+        <h3>Administrative Operations</h3>
+        <p>Workflow management, scheduling coordination, multi-system documentation, and remote operational support.</p>
     </div>
 
     <div class="card">
-        <h3>Documentation & Compliance</h3>
-        <p>Accurate healthcare documentation, CRM/EMR system navigation, and HIPAA-compliant record maintenance.</p>
+        <h3>Compliance & Documentation Accuracy</h3>
+        <p>HIPAA-compliant record maintenance, CRM/EMR system navigation, and detailed data validation.</p>
     </div>
 
-    <div class="card">
-        <h3>Communication & Coordination</h3>
-        <p>Professional provider & patient communication, multi-system coordination, and cross-functional collaboration.</p>
-    </div>
 </section>
 
 <!-- EXPERIENCE -->
@@ -225,102 +248,43 @@ footer {
 
     <div class="card">
         <h3>TOA Global – South Hills Dental Arts (PA)</h3>
-        <p><strong>Administrative & Insurance Support Specialist</strong> | Apr 2024 – Jan 2026</p>
+        <p><strong>Administrative & Insurance Support Specialist</strong> | 2024 – 2026</p>
         <ul>
-            <li>Conducted detailed insurance eligibility verification across multiple carrier portals.</li>
-            <li>Maintained accurate and HIPAA-compliant patient records.</li>
-            <li>Managed prior authorizations and claims follow-ups.</li>
-            <li>Coordinated provider and patient communications to improve workflow efficiency.</li>
+            <li>Performed detailed insurance eligibility verification across multiple carrier portals.</li>
+            <li>Managed prior authorizations and claims follow-up processes.</li>
+            <li>Maintained accurate and compliant patient documentation.</li>
+            <li>Coordinated provider and patient communications to streamline workflows.</li>
         </ul>
     </div>
 
     <div class="card">
         <h3>Firstsource Solutions Ltd.</h3>
-        <p><strong>Healthcare Operations Associate</strong> | Oct 2022 – Mar 2024</p>
+        <p><strong>Healthcare Operations Associate</strong> | 2022 – 2024</p>
         <ul>
-            <li>Performed eligibility and benefits investigations.</li>
-            <li>Handled high-volume provider and insurance communications.</li>
-            <li>Monitored full claims lifecycle including appeals.</li>
-            <li>Assisted in workflow optimization initiatives.</li>
+            <li>Conducted eligibility and benefits investigations.</li>
+            <li>Handled high-volume insurance and provider communications.</li>
+            <li>Monitored claims lifecycle including follow-ups and appeals.</li>
+            <li>Supported workflow optimization initiatives.</li>
         </ul>
     </div>
 
-    <div class="card">
-        <h3>Freelance Human Resources Recruitment Assistant</h3>
-        <p><strong>Remote – United States</strong> | Aug 2022 – Oct 2022</p>
-        <ul>
-            <li>Conducted structured candidate sourcing and screening.</li>
-            <li>Coordinated interviews across multiple time zones.</li>
-            <li>Maintained confidential recruitment documentation.</li>
-        </ul>
-    </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="contact-section">
     <h2>Contact</h2>
+    <p>Open to remote healthcare operations and administrative support opportunities.</p>
 
-    <div class="contact-logos">
-        <a href="mailto:erwinjade24@gmail.com">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_Icon.png" alt="Email">
-        </a>
-
-        <a href="https://www.linkedin.com/in/zcxwin/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-        </a>
-
-        <a href="tel:+639243733050">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Phone_font_awesome.svg" alt="Phone">
-        </a>
+    <div class="contact-links">
+        <a href="mailto:erwinjade24@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/zcxwin/" target="_blank">LinkedIn</a>
+        <a href="tel:+639243733050">Phone</a>
     </div>
 </section>
 
 <footer>
-    © 2026 Erwin Bolhano | Designed by Est Chuchu
+    © 2026 Erwin Bolhano | Healthcare Operations Professional
 </footer>
-
-<!-- Background Animation -->
-<script>
-const canvas=document.getElementById('background');
-const ctx=canvas.getContext('2d');
-let w=canvas.width=window.innerWidth;
-let h=canvas.height=window.innerHeight;
-
-const particles=[];
-for(let i=0;i<80;i++){
-    particles.push({
-        x:Math.random()*w,
-        y:Math.random()*h,
-        r:Math.random()*2+1,
-        dx:(Math.random()-0.5)*0.2,
-        dy:(Math.random()-0.5)*0.2
-    });
-}
-
-function draw(){
-    ctx.clearRect(0,0,w,h);
-    particles.forEach(p=>{
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-        ctx.fillStyle="rgba(10,61,98,0.12)";
-        ctx.fill();
-        p.x+=p.dx;
-        p.y+=p.dy;
-
-        if(p.x<0)p.x=w;
-        if(p.x>w)p.x=0;
-        if(p.y<0)p.y=h;
-        if(p.y>h)p.y=0;
-    });
-    requestAnimationFrame(draw);
-}
-draw();
-
-window.addEventListener('resize',()=>{
-    w=canvas.width=window.innerWidth;
-    h=canvas.height=window.innerHeight;
-});
-</script>
 
 </body>
 </html>
