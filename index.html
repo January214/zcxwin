@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Erwin Bolhano | Admin & Healthcare Professional</title>
-
 <style>
 /* --- Reset & Global --- */
 * {margin:0; padding:0; box-sizing:border-box;}
@@ -45,24 +44,38 @@ nav a {
 nav a:hover {text-decoration: underline;}
 
 /* --- Sections --- */
-section {padding:120px 20px; min-height:100vh; max-width:900px; margin:auto;}
+section {padding:120px 20px; max-width:900px; margin:auto;}
 h1 {margin-bottom:15px;}
 
-/* --- Home Section --- */
-#home {text-align:center;}
-.profile-photo {
-    width:200px; height:200px;
-    object-fit:cover; border-radius:50%;
-    box-shadow:0 6px 18px rgba(0,0,0,0.2);
-    margin-bottom:20px;
-    transition: transform 0.5s ease;
-    opacity:0; transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
+/* --- Home Section (Side by Side) --- */
+#home {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+    padding-top:140px;
+    min-height:100vh;
 }
-.profile-photo:hover {transform: translateY(-10px) scale(1.05);}
-#home .name, #home p {opacity:0; transform:translateY(20px); animation:fadeInUp 1s forwards;}
-#home .name {animation-delay:0.6s; font-size:42px; font-weight:700;}
-#home p {animation-delay:0.9s; font-size:18px; max-width:650px; margin:15px auto; line-height:1.6;}
+#home img {
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+    opacity:0; transform:translateY(20px);
+    animation:fadeInUp 1s forwards;
+}
+#home .home-text h1 {
+    font-size:42px; font-weight:700; margin-bottom:15px;
+    opacity:0; transform:translateY(20px);
+    animation:fadeInUp 1s forwards; animation-delay:0.3s;
+}
+#home .home-text p {
+    font-size:18px; line-height:1.6;
+    opacity:0; transform:translateY(20px);
+    animation:fadeInUp 1s forwards; animation-delay:0.6s;
+}
 
 /* --- About Section --- */
 #about p {max-width:650px; margin:auto; line-height:1.6; text-align:center; font-size:18px;}
@@ -87,14 +100,9 @@ h1 {margin-bottom:15px;}
 /* --- Footer --- */
 footer {text-align:center; padding:30px 0; font-size:14px; color:#555;}
 
-/* --- Buttons --- */
-.button {display:inline-block; padding:10px 20px; background:#0a3d62; color:white; text-decoration:none; border-radius:5px; margin-top:15px;}
-.button:hover {background:#074173;}
-
 /* --- Fade-in Animation --- */
 @keyframes fadeInUp {to{opacity:1; transform:translateY(0);}}
 
-/* --- Lists --- */
 ul {margin:10px 0 0 20px; line-height:1.5;}
 </style>
 </head>
@@ -115,9 +123,16 @@ ul {margin:10px 0 0 20px; line-height:1.5;}
 
 <!-- Home -->
 <section id="home">
-    <img src="images/profile.jpg" alt="Erwin Bolhano" class="profile-photo">
-    <h1 class="name">Erwin Bolhano</h1>
-    <p>Healthcare and administrative professional with 3+ years of experience in dental, medical, and HR support. Skilled in insurance verification, documentation, and operational workflows. Quickly adapts to new tools and environments to optimize processes and support teams effectively.</p>
+    <div>
+        <img src="images/profile.jpg" alt="Erwin Bolhano">
+    </div>
+    <div class="home-text" style="flex:2; min-width:250px;">
+        <h1>Erwin Bolhano</h1>
+        <p>I began my career supporting healthcare and dental operations where precision and timeliness directly impact both patient experience and financial outcomes.<br><br>
+        Through hands-on experience in insurance verification, claims follow-up, and documentation management, I developed a deep understanding of how administrative excellence supports clinical care.<br><br>
+        I thrive in structured, compliance-driven environments where attention to detail matters. Whether coordinating with providers, insurance carriers, or patients, I focus on clarity, accountability, and operational efficiency.<br><br>
+        I am continuously refining my technical and administrative skills to contribute long-term value to healthcare organizations — especially in remote and hybrid environments.</p>
+    </div>
 </section>
 
 <!-- About -->
@@ -129,26 +144,10 @@ ul {margin:10px 0 0 20px; line-height:1.5;}
 <!-- Expertise -->
 <section id="expertise">
     <h1>Core Expertise</h1>
-    <div class="card interactive">
-        <div class="card-icon">🗂️</div>
-        <strong>Administrative Coordination</strong>
-        <p>Workflow management, scheduling, data entry, record-keeping, and remote support.</p>
-    </div>
-    <div class="card interactive">
-        <div class="card-icon">🏥</div>
-        <strong>Healthcare & Patient Support</strong>
-        <p>Insurance eligibility & benefits verification, claims follow-up, patient access, provider support, and RCM fundamentals.</p>
-    </div>
-    <div class="card interactive">
-        <div class="card-icon">📄</div>
-        <strong>Documentation & Compliance</strong>
-        <p>Healthcare documentation, CRM/EMR systems, attention to detail, and regulatory compliance.</p>
-    </div>
-    <div class="card interactive">
-        <div class="card-icon">📞</div>
-        <strong>Communication & Collaboration</strong>
-        <p>Professional phone/email communication, multi-tasking, team collaboration, and process organization.</p>
-    </div>
+    <div class="card interactive"><div class="card-icon">🗂️</div><strong>Administrative Coordination</strong><p>Workflow management, scheduling, data entry, record-keeping, and remote support.</p></div>
+    <div class="card interactive"><div class="card-icon">🏥</div><strong>Healthcare & Patient Support</strong><p>Insurance eligibility & benefits verification, claims follow-up, patient access, provider support, and RCM fundamentals.</p></div>
+    <div class="card interactive"><div class="card-icon">📄</div><strong>Documentation & Compliance</strong><p>Healthcare documentation, CRM/EMR systems, attention to detail, and regulatory compliance.</p></div>
+    <div class="card interactive"><div class="card-icon">📞</div><strong>Communication & Collaboration</strong><p>Professional phone/email communication, multi-tasking, team collaboration, and process organization.</p></div>
 </section>
 
 <!-- Experience -->
@@ -158,29 +157,29 @@ ul {margin:10px 0 0 20px; line-height:1.5;}
         <strong>TOA Global – South Hills Dental Arts (PA)</strong>
         <p>Administrative & Insurance Support Specialist | Apr 2024 – Jan 2026</p>
         <ul>
-            <li>Verified insurance eligibility and plan details across multiple portals.</li>
-            <li>Maintained accurate patient and administrative records.</li>
-            <li>Coordinated authorizations and claims resolution.</li>
-            <li>Supported patient communications and appointment coordination.</li>
+            <li>Conducted detailed insurance eligibility verification across multiple carrier portals, ensuring accurate benefit breakdowns and minimizing billing discrepancies before patient appointments.</li>
+            <li>Maintained and updated comprehensive patient records, ensuring data accuracy, HIPAA compliance, and seamless coordination between clinical and administrative teams.</li>
+            <li>Managed prior authorizations and facilitated timely claims resolution by proactively communicating with insurance providers and tracking claim status updates.</li>
+            <li>Provided professional patient communication support, assisting with appointment coordination, insurance clarification, and general inquiries to enhance overall patient experience.</li>
         </ul>
     </div>
     <div class="card">
         <strong>Firstsource Solutions Ltd.</strong>
         <p>Healthcare Operations Associate | Oct 2022 – Mar 2024</p>
         <ul>
-            <li>Performed benefits verification and eligibility checks.</li>
-            <li>Managed inbound/outbound communications with providers and insurance carriers.</li>
-            <li>Followed up on claims, appeals, and documentation.</li>
-            <li>Assisted in workflow coordination and process optimization.</li>
+            <li>Performed detailed eligibility and benefits investigations, ensuring accurate coverage validation prior to medical service delivery.</li>
+            <li>Managed high-volume inbound and outbound communications with providers and insurance carriers to resolve documentation and claims-related concerns.</li>
+            <li>Monitored claims lifecycle, including follow-ups, appeals submissions, and discrepancy resolution to reduce processing delays.</li>
+            <li>Assisted in workflow optimization initiatives to improve team productivity and turnaround times.</li>
         </ul>
     </div>
     <div class="card">
-        <strong>Human Resources Recruitment Assistant – Freelance</strong>
+        <strong>Freelance Human Resources Recruitment Assistant</strong>
         <p>Aug 2022 – Oct 2022 | United States (Remote)</p>
         <ul>
-            <li>Sourced and screened candidates for U.S.-based roles.</li>
-            <li>Coordinated interviews and maintained recruitment tracking systems.</li>
-            <li>Managed candidate records and documentation with high accuracy.</li>
+            <li>Conducted structured candidate sourcing and preliminary screening aligned with client role requirements.</li>
+            <li>Coordinated interviews across multiple time zones while maintaining organized tracking systems.</li>
+            <li>Maintained confidential recruitment records with high accuracy and documentation compliance.</li>
         </ul>
     </div>
 </section>
