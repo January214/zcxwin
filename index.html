@@ -62,27 +62,30 @@ h1 {margin-bottom:15px;}
 .profile-photo:hover {transform: translateY(-10px) scale(1.05);}
 #home .name, #home p {opacity:0; transform:translateY(20px); animation:fadeInUp 1s forwards;}
 #home .name {animation-delay:0.6s; font-size:42px; font-weight:700;}
-#home p {animation-delay:0.9s; font-size:18px; max-width:600px; margin:15px auto;}
+#home p {animation-delay:0.9s; font-size:18px; max-width:650px; margin:15px auto; line-height:1.6;}
 
 /* --- About Section --- */
-#about p {max-width:600px; margin:auto; line-height:1.6; text-align:center;}
+#about p {max-width:650px; margin:auto; line-height:1.6; text-align:center; font-size:18px;}
 
-/* --- Expertise Cards --- */
-.card {background:white; padding:20px; margin:20px 0; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+/* --- Expertise & Experience Cards --- */
+.card {background:white; padding:20px; margin:20px 0; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08); opacity:0; transform:translateY(30px); transition: all 0.6s ease-out;}
 .card.interactive {position:relative; cursor:pointer; transition:transform 0.3s ease, box-shadow 0.3s ease;}
 .card.interactive:hover {transform:translateY(-10px); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
 .card-icon {font-size:36px; margin-bottom:10px;}
 
 /* --- Tools Section --- */
-.tool-list {display:flex; flex-wrap:wrap; gap:15px; margin-top:15px; justify-content:center;}
-.tool {display:flex; align-items:center; gap:8px; background:white; padding:10px 15px; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.1); font-weight:600; transition: transform 0.3s ease;}
+.tool-list {display:flex; flex-wrap:wrap; gap:20px; margin-top:15px; justify-content:center;}
+.tool {display:flex; align-items:center; gap:12px; background:white; padding:12px 18px; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.1); font-weight:600; opacity:0; transform:translateY(30px); transition: all 0.6s ease-out;}
 .tool:hover {transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
-.tool img {width:24px; height:24px;}
+.tool img {width:36px; height:36px;}
 
 /* --- Contact Section --- */
-.contact-logos {display:flex; gap:20px; justify-content:center; margin-top:20px;}
-.contact-logos img {width:50px; height:50px; cursor:pointer; transition: transform 0.3s;}
+.contact-logos {display:flex; gap:30px; justify-content:center; margin-top:20px;}
+.contact-logos img {width:60px; height:60px; cursor:pointer; transition: transform 0.3s;}
 .contact-logos img:hover {transform: scale(1.2);}
+
+/* --- Footer --- */
+footer {text-align:center; padding:30px 0; font-size:14px; color:#555;}
 
 /* --- Buttons --- */
 .button {display:inline-block; padding:10px 20px; background:#0a3d62; color:white; text-decoration:none; border-radius:5px; margin-top:15px;}
@@ -92,7 +95,7 @@ h1 {margin-bottom:15px;}
 @keyframes fadeInUp {to{opacity:1; transform:translateY(0);}}
 
 /* --- Lists --- */
-ul {margin:10px 0 0 20px;}
+ul {margin:10px 0 0 20px; line-height:1.5;}
 </style>
 </head>
 <body>
@@ -114,13 +117,13 @@ ul {margin:10px 0 0 20px;}
 <section id="home">
     <img src="images/profile.jpg.jpg" alt="Erwin Bolhano" class="profile-photo">
     <h1 class="name">Erwin Bolhano</h1>
-    <p>Administrative and healthcare professional with 3+ years of experience supporting operations, documentation, billing, and patient services. Quickly adapts to new tools and environments.</p>
+    <p>Healthcare and administrative professional with 3+ years of experience in dental, medical, and HR support. Skilled in insurance verification, documentation, and operational workflows. Quickly adapts to new tools and environments to optimize processes and support teams effectively.</p>
 </section>
 
 <!-- About -->
 <section id="about">
     <h1>About Me</h1>
-    <p>Results-driven professional with experience in healthcare, dental, administrative operations, and human resources support. Skilled in documentation, insurance verification, workflow coordination, and process improvement. Adaptable and able to thrive in diverse professional roles.</p>
+    <p>I am a versatile professional with experience in healthcare, dental, administrative, and human resources support. I excel at improving workflows, ensuring accurate documentation, handling insurance verification, and maintaining compliance. Known for attention to detail, clear communication, and adaptability across tools and systems.</p>
 </section>
 
 <!-- Expertise -->
@@ -129,12 +132,12 @@ ul {margin:10px 0 0 20px;}
     <div class="card interactive">
         <div class="card-icon">🗂️</div>
         <strong>Administrative Coordination</strong>
-        <p>Workflow management, remote support, scheduling, and record-keeping.</p>
+        <p>Workflow management, scheduling, data entry, record-keeping, and remote support.</p>
     </div>
     <div class="card interactive">
         <div class="card-icon">🏥</div>
         <strong>Healthcare & Patient Support</strong>
-        <p>Insurance verification, claims follow-up, patient access, and provider support.</p>
+        <p>Insurance eligibility & benefits verification, claims follow-up, patient access, provider support, and RCM fundamentals.</p>
     </div>
     <div class="card interactive">
         <div class="card-icon">📄</div>
@@ -144,7 +147,7 @@ ul {margin:10px 0 0 20px;}
     <div class="card interactive">
         <div class="card-icon">📞</div>
         <strong>Communication & Collaboration</strong>
-        <p>Professional phone/email communication, multi-tasking, and team coordination.</p>
+        <p>Professional phone/email communication, multi-tasking, team collaboration, and process organization.</p>
     </div>
 </section>
 
@@ -155,9 +158,9 @@ ul {margin:10px 0 0 20px;}
         <strong>TOA Global – South Hills Dental Arts (PA)</strong>
         <p>Administrative & Insurance Support Specialist | Apr 2024 – Jan 2026</p>
         <ul>
-            <li>Verified insurance eligibility and plan details for patients across multiple portals.</li>
-            <li>Maintained accurate patient and administrative records for billing and operations.</li>
-            <li>Coordinated authorizations and claims resolution with insurance carriers.</li>
+            <li>Verified insurance eligibility and plan details across multiple portals.</li>
+            <li>Maintained accurate patient and administrative records.</li>
+            <li>Coordinated authorizations and claims resolution.</li>
             <li>Supported patient communications and appointment coordination.</li>
         </ul>
     </div>
@@ -167,7 +170,7 @@ ul {margin:10px 0 0 20px;}
         <ul>
             <li>Performed benefits verification and eligibility checks.</li>
             <li>Managed inbound/outbound communications with providers and insurance carriers.</li>
-            <li>Followed up on claims, appeals, and documentation to support healthcare operations.</li>
+            <li>Followed up on claims, appeals, and documentation.</li>
             <li>Assisted in workflow coordination and process optimization.</li>
         </ul>
     </div>
@@ -177,7 +180,7 @@ ul {margin:10px 0 0 20px;}
         <ul>
             <li>Sourced and screened candidates for U.S.-based roles.</li>
             <li>Coordinated interviews and maintained recruitment tracking systems.</li>
-            <li>Managed candidate records and documentation with strong data accuracy.</li>
+            <li>Managed candidate records and documentation with high accuracy.</li>
         </ul>
     </div>
 </section>
@@ -185,17 +188,17 @@ ul {margin:10px 0 0 20px;}
 <!-- Tools & Applications -->
 <section id="tools">
     <h1>Tools & Applications</h1>
-    <p>Proficient with a variety of professional tools and quickly adapt to new systems:</p>
+    <p>Proficient with professional tools and quickly adapt to new systems:</p>
     <div class="tool-list">
-        <div class="tool"><img src="images/salesforce.png" alt="Salesforce">Salesforce</div>
-        <div class="tool"><img src="images/genesys.png" alt="Genesys">Genesys</div>
-        <div class="tool"><img src="images/touchtone.png" alt="Touchtone">Touchtone</div>
-        <div class="tool"><img src="images/adit.png" alt="ADIT">ADIT</div>
-        <div class="tool"><img src="images/opendental.png" alt="Open Dental">Open Dental</div>
-        <div class="tool"><img src="images/office.png" alt="MS Office">MS Office</div>
-        <div class="tool"><img src="images/teams.png" alt="MS Teams">MS Teams</div>
-        <div class="tool"><img src="images/whatsapp.png" alt="WhatsApp">WhatsApp</div>
-        <div class="tool"><img src="images/adapt.png" alt="Quick Adaptation">Quick Adaptation</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Salesforce_logo.svg" alt="Salesforce">Salesforce</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Genesys_logo.svg" alt="Genesys">Genesys</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Touchtone_logo.png" alt="Touchtone">Touchtone</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/ADIT_logo.png" alt="ADIT">ADIT</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Open_Dental_logo.png" alt="Open Dental">Open Dental</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_Office_logo_%282019%E2%80%93present%29.svg" alt="MS Office">MS Office</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Microsoft_teams_%282019%E2%80%93present%29.svg" alt="MS Teams">MS Teams</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">WhatsApp</div>
+        <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Adaptation_icon.png" alt="Quick Adaptation">Quick Adaptation</div>
     </div>
 </section>
 
@@ -203,15 +206,15 @@ ul {margin:10px 0 0 20px;}
 <section id="contact">
     <h1>Contact</h1>
     <div class="contact-logos">
-        <a href="mailto:erwinjade24@gmail.com"><img src="images/email.png" alt="Email"></a>
-        <a href="https://linkedin.com/in/zcxwin" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-        <a href="tel:+639243733050"><img src="images/phone.png" alt="Phone"></a>
+        <a href="mailto:erwinjade24@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_Icon.png" alt="Email"></a>
+        <a href="https://www.linkedin.com/in/zcxwin/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+        <a href="tel:+639243733050"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Phone_font_awesome.svg" alt="Phone"></a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer style="text-align:center; padding:30px 0; font-size:14px; color:#555;">
-    © 2026 Erwin Bolhano
+<footer>
+    © 2026 Erwin Bolhano | Designed by Est Chuchu
 </footer>
 
 <!-- Background Animation Script -->
@@ -238,6 +241,23 @@ function draw(){
 }
 draw();
 window.addEventListener('resize',()=>{w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight;});
+</script>
+
+<!-- Scroll Reveal Script -->
+<script>
+function revealOnScroll(){
+    const elements = document.querySelectorAll('.card, .tool');
+    const windowBottom = window.innerHeight;
+    elements.forEach(el=>{
+        const elementTop = el.getBoundingClientRect().top;
+        if(elementTop < windowBottom - 50){
+            el.style.opacity = 1;
+            el.style.transform = "translateY(0)";
+        }
+    });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 </script>
 
 </body>
