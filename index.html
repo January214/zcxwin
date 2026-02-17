@@ -57,20 +57,6 @@ section h2 {font-size:34px; font-weight:800; margin-bottom:50px; color:#0a3d62;}
 .cards-container .card {flex:1 1 280px; cursor:pointer; transition:transform 0.3s; text-align:center;}
 .cards-container .card:hover {transform:translateY(-5px);}
 
-/* --- CONTACT --- */
-.cards-container .card {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-}
-.cards-container .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* Invisible span inside cards */
-.cards-container .card span {display:none;}
-
 /* --- Footer --- */
 footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; color:#7b8a97;}
 
@@ -200,14 +186,14 @@ footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; col
 <!-- CONTACT -->
 <section id="contact">
     <h2>CONTACT</h2>
-    <div class="cards-container" style="flex-direction:column; align-items:center; gap:15px;">
-        <div class="card" onclick="window.location='tel:+639243733050'" title="Phone" style="cursor: pointer; width:auto; padding:15px;">
+    <div style="max-width:400px; margin:0 auto; text-align:left; display:flex; flex-direction:column; gap:10px;">
+        <div style="cursor:pointer;" onclick="window.location='tel:+639243733050'" title="Phone">
             <strong>Phone:</strong> +63 924 373 3050
         </div>
-        <div class="card" onclick="window.location='mailto:erwinjade24@gmail.com'" title="Email" style="cursor: pointer; width:auto; padding:15px;">
+        <div style="cursor:pointer;" onclick="window.location='mailto:erwinjade24@gmail.com'" title="Email">
             <strong>Email:</strong> erwinjade24@gmail.com
         </div>
-        <div class="card" onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')" title="LinkedIn" style="cursor: pointer; width:auto; padding:15px;">
+        <div style="cursor:pointer;" onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')" title="LinkedIn">
             <strong>LinkedIn</strong>
         </div>
     </div>
