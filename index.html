@@ -180,8 +180,13 @@ footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; col
     <h2>WHY HIRE ME</h2>
     <div class="cards-container">
         <div class="card">
-            <p>Proven Healthcare Administrative and Insurance Operations Professional with hands-on experience verifying <strong>50+ patient insurances daily</strong> and managing <strong>200+ claims weekly</strong> in high-volume dental practice environments. Highly experienced in Open Dental, Salesforce, and insurance portals, supporting multiple clinic locations with accuracy and consistency.</p>
-            <p>Recognized for strong attention to detail, ~<strong>99% documentation accuracy</strong>, and a reliable remote work record with consistent attendance. Committed to compliance, reducing claims aging, and ensuring efficient insurance coordination for smooth clinic operations.</p>
+            <p>
+                Proven Dental Administrative and Insurance Operations Professional with hands-on experience verifying <strong>50+ patient insurances daily</strong> and managing <strong>200+ claims weekly</strong> in high-volume dental practice environments.  
+                Highly experienced in Open Dental, Salesforce, and dental insurance portals, supporting multiple clinic locations with accuracy and consistency.
+            </p>
+            <p>
+                Recognized for strong attention to detail, ~<strong>99% documentation accuracy</strong>, and a reliable remote work record with consistent attendance. Committed to compliance, reducing claims aging, and ensuring efficient insurance coordination to support smooth dental operations.
+            </p>
         </div>
     </div>
 </section>
@@ -189,33 +194,19 @@ footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; col
 <!-- CONTACT -->
 <section id="contact">
     <h2>CONTACT</h2>
-    <div class="cards-container">
-        <div class="card" onclick="window.location='mailto:erwinjade24@gmail.com'">Email: erwinjade24@gmail.com</div>
-        <div class="card" onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')">LinkedIn</div>
-        <div class="card" onclick="window.location='tel:+639243733050'">Phone: +639243733050</div>
+    <div class="cards-container" style="justify-content:center;">
+        <div class="card" onclick="window.location='mailto:erwinjade24@gmail.com'" title="Email">
+            <img src="images/email-icon.png" alt="Email" style="width:40px;">
+        </div>
+        <div class="card" onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')" title="LinkedIn">
+            <img src="images/linkedin-icon.png" alt="LinkedIn" style="width:40px;">
+        </div>
+        <div class="card" onclick="window.location='tel:+639243733050'" title="Phone">
+            <img src="images/phone-icon.png" alt="Phone" style="width:40px;">
+        </div>
     </div>
 </section>
 
 <footer>
-    © 2026 Erwin Bolhano | Healthcare Operations Professional
-</footer>
-
-<!-- Scroll Animation -->
-<script>
-function revealOnScroll(){
-    const elements = document.querySelectorAll('.card, .hero-text, .hero-image');
-    const windowBottom = window.innerHeight;
-    elements.forEach(el=>{
-        const top = el.getBoundingClientRect().top;
-        if(top < windowBottom - 50){
-            el.style.opacity = 1;
-            el.style.transform = "translateY(0)";
-        }
-    });
-}
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
-</script>
-
-</body>
-            </html>
+    © 2026 Erwin Bolhano | Dental Administrative & Insurance Operations Professional
+            </footer>
