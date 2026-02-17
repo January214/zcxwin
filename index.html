@@ -58,19 +58,21 @@ section h2 {font-size:34px; font-weight:800; margin-bottom:50px; color:#0a3d62;}
 .cards-container .card:hover {transform:translateY(-5px);}
 
 /* --- CONTACT --- */
-.contact-section {text-align:center;}
+.cards-container .card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+.cards-container .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Invisible span inside cards */
+.cards-container .card span {display:none;}
 
 /* --- Footer --- */
 footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; color:#7b8a97;}
-
-/* --- CONTACT ICONS HOVER EFFECT --- */
-.cards-container .card img {
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-.cards-container .card:hover img {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
 
 /* --- Animations --- */
 @keyframes fadeInUp {to{opacity:1; transform:translateY(0);}}
@@ -139,8 +141,8 @@ footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; col
     <h2>PROFESSIONAL EXPERIENCE</h2>
     <div class="cards-container">
         <div class="card">
-            <h3>TOA Global – South Hills Dental Arts (PA)</h3>
-            <p><strong>Administrative & Insurance Support Specialist</strong> | 2024 – 2026</p>
+            <h3>TOA Global – South Hills Dental Arts </h3>
+            <p><strong>Insurance Verification Specialist</strong> | 2024 – 2026</p>
             <ul>
                 <li>Verified insurance eligibility for 50+ patients daily, including scheduled, walk-in, and emergency visits.</li>
                 <li>Managed 200+ claims weekly to reduce claims aging and ensure timely processing.</li>
@@ -150,12 +152,13 @@ footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; col
         </div>
         <div class="card">
             <h3>Firstsource Solutions Ltd.</h3>
-            <p><strong>Healthcare Operations Associate</strong> | 2022 – 2024</p>
+            <p><strong>Healthcare Executive</strong> | 2022 – 2024</p>
             <ul>
-                <li>Conducted dental insurance eligibility and benefits verification.</li>
-                <li>Provided customer support for dental insurance inquiries.</li>
-                <li>Followed up on high-volume insurance claims for timely resolution.</li>
-                <li>Assisted in workflow optimization for multiple dental locations.</li>
+                <li>Managed high-volume inbound and outbound calls with U.S. healthcare providers and insurance companies.
+                </li>
+                <li>Assisted with claims status inquiries, appeals follow-ups, authorization checks, and eligibility verification.
+                </li>
+    
             </ul>
         </div>
         <div class="card">
@@ -197,18 +200,21 @@ footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; col
     </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT (Text-Based Invisible Links) -->
 <section id="contact">
     <h2>CONTACT</h2>
-    <div class="cards-container" style="justify-content:center;">
-        <div class="card" onclick="window.location='mailto:erwinjade24@gmail.com'" title="Email">
-            <img src="images/email-icon.png" alt="Email" style="width:40px;">
+    <div class="cards-container" style="justify-content:center; gap:30px;">
+        <!-- Email -->
+        <div class="card" onclick="window.location='mailto:erwinjade24@gmail.com'" title="Email" style="width:50px; height:50px;">
+            <span>Email</span>
         </div>
-        <div class="card" onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')" title="LinkedIn">
-            <img src="images/linkedin-icon.png" alt="LinkedIn" style="width:40px;">
+        <!-- LinkedIn -->
+        <div class="card" onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')" title="LinkedIn" style="width:50px; height:50px;">
+            <span>LinkedIn</span>
         </div>
-        <div class="card" onclick="window.location='tel:+639243733050'" title="Phone">
-            <img src="images/phone-icon.png" alt="Phone" style="width:40px;">
+        <!-- Phone -->
+        <div class="card" onclick="window.location='tel:+639243733050'" title="Phone" style="width:50px; height:50px;">
+            <span>Phone</span>
         </div>
     </div>
 </section>
@@ -235,4 +241,4 @@ window.addEventListener('load', revealOnScroll);
 </script>
 
 </body>
-        </html>
+                                          </html>
