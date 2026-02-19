@@ -186,16 +186,36 @@ footer {text-align:center; padding:40px; background:#ffffff; font-size:14px; col
 <!-- CONTACT -->
 <section id="contact">
     <h2>CONTACT</h2>
-    <div style="max-width:400px; margin:0 auto; text-align:left; display:flex; flex-direction:column; gap:10px;">
-        <div style="cursor:pointer;" onclick="window.location='tel:+639243733050'" title="Phone">
-            <strong>Phone:</strong> +63 924 373 3050
-        </div>
-        <div style="cursor:pointer;" onclick="window.location='mailto:erwinjade24@gmail.com'" title="Email">
-            <strong>Email:</strong> erwinjade24@gmail.com
-        </div>
-        <div style="cursor:pointer;" onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')" title="LinkedIn">
-            <strong>LinkedIn</strong>
-        </div>
+
+    <div style="display:flex; gap:20px; align-items:center;">
+
+        <!-- Phone Icon -->
+        <img src="icons/phone.png"
+             alt="Phone"
+             title="Call"
+             onclick="window.location='tel:+639243733050'"
+             style="width:40px; height:40px; cursor:pointer; transition:transform 0.2s ease;"
+             onmouseover="this.style.transform='scale(1.15)'"
+             onmouseout="this.style.transform='scale(1)'">
+
+        <!-- Gmail Icon -->
+        <img src="icons/gmail.png"
+             alt="Email"
+             title="Email"
+             onclick="window.location='mailto:erwinjade24@gmail.com'"
+             style="width:40px; height:40px; cursor:pointer; transition:transform 0.2s ease;"
+             onmouseover="this.style.transform='scale(1.15)'"
+             onmouseout="this.style.transform='scale(1)'">
+
+        <!-- LinkedIn Icon -->
+        <img src="icons/linkedin.png"
+             alt="LinkedIn"
+             title="LinkedIn"
+             onclick="window.open('https://www.linkedin.com/in/zcxwin/', '_blank')"
+             style="width:40px; height:40px; cursor:pointer; transition:transform 0.2s ease;"
+             onmouseover="this.style.transform='scale(1.15)'"
+             onmouseout="this.style.transform='scale(1)'">
+
     </div>
 </section>
 
