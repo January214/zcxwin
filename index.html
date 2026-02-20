@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Erwin Bolhano | Dental Insurance & Billing Support Specialist</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
---primary:#0f3f47;
---accent:#1f4f59;
+--primary:#1f4f59;
+--dark:#0f2e35;
 --light:#f4f7f9;
 --lighter:#f8fafc;
 --text:#111827;
@@ -22,11 +22,13 @@ html{
 scroll-behavior:smooth;
 }
 
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:Inter,sans-serif;
 color:var(--text);
 background:#f9fbfc;
-margin:0;
+line-height:1.8;
 }
 
 .container{
@@ -41,35 +43,35 @@ padding:120px 0;
 
 h1,h2,h3{
 font-family:'Playfair Display',serif;
+letter-spacing:.3px;
 }
 
 h1{
-font-size:52px;
+font-size:54px;
 line-height:1.2;
 margin-bottom:25px;
 }
 
-h2{
-font-size:40px;
-margin-bottom:25px;
+.section-title{
 text-align:center;
+font-size:42px;
+margin-bottom:25px;
 }
 
 .section-label{
 text-align:center;
 font-size:13px;
-letter-spacing:2px;
-color:var(--accent);
+letter-spacing:3px;
+color:var(--primary);
 font-weight:600;
-margin-bottom:12px;
+margin-bottom:14px;
 }
 
 .section-description{
+text-align:center;
 max-width:900px;
 margin:0 auto 30px;
-text-align:center;
 color:var(--muted);
-line-height:1.9;
 font-size:18px;
 }
 
@@ -85,8 +87,8 @@ transition:all .3s ease;
 }
 
 .btn:hover{
-transform:translateY(-3px);
-box-shadow:0 8px 20px rgba(0,0,0,.15);
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .card{
@@ -99,35 +101,22 @@ transition:all .3s ease;
 
 .card:hover{
 transform:translateY(-6px);
-box-shadow:0 15px 35px rgba(0,0,0,.08);
+box-shadow:0 18px 40px rgba(0,0,0,.08);
 }
 
-.grid-2{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:40px;
-}
-
-.grid-3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-}
-
-.results-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:50px;
-}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:60px;}
 
 .result-box{
 background:#fff;
-border-radius:18px;
+border:1px solid var(--border);
 padding:30px;
+border-radius:18px;
 text-align:center;
 font-weight:600;
-border:1px solid var(--border);
+color:#374151;
 transition:.3s;
 }
 
@@ -136,13 +125,42 @@ transform:translateY(-5px);
 box-shadow:0 12px 25px rgba(0,0,0,.08);
 }
 
+.case-study{
+margin-top:60px;
+background:#fff;
+border:1px solid var(--border);
+border-radius:20px;
+padding:40px;
+}
+
+.cta-box{
+margin-top:70px;
+background:#eaf4f6;
+border:1px solid #cde4e8;
+border-radius:20px;
+padding:60px;
+text-align:center;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(to right,#f8fafc,#eef3f5);
+padding-top:160px;
+}
+
+.hero p{
+color:var(--muted);
+margin-bottom:20px;
+font-size:18px;
+}
+
 /* NAVBAR */
 .navbar{
 position:fixed;
 top:0;
 width:100%;
 background:rgba(255,255,255,.85);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 border-bottom:1px solid var(--border);
 z-index:1000;
 }
@@ -151,77 +169,92 @@ z-index:1000;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 30px;
+padding:20px 30px;
 }
 
-.nav-links a{
-margin-left:30px;
+.navbar a{
 text-decoration:none;
 color:var(--text);
 font-weight:600;
+margin-left:30px;
 transition:.3s;
 }
 
-.nav-links a:hover{
-color:var(--accent);
+.navbar a:hover{
+color:var(--primary);
 }
 
-/* HERO */
-.hero{
-padding-top:160px;
-background:linear-gradient(to right,#f8fafc,#eef3f5);
-}
-
-.hero p{
-font-size:18px;
-line-height:1.9;
-color:var(--muted);
+/* BADGES */
+.badges{
+display:flex;
+gap:10px;
 margin-bottom:20px;
 }
 
-/* FOOTER */
-.footer{
-background:linear-gradient(to right,#0b2f36,#041e24);
-color:#fff;
-text-align:center;
-padding:80px 20px;
-margin-top:100px;
+.badge{
+background:#e6f2f4;
+color:var(--primary);
+padding:6px 14px;
+border-radius:999px;
+font-size:13px;
+font-weight:500;
 }
 
-.footer-icons{
+/* ICONS */
+.contact-icons, .footer-icons{
 display:flex;
-justify-content:center;
 gap:25px;
-margin:25px 0;
+justify-content:center;
+margin-top:25px;
 }
 
-.footer-icons img{
+.contact-icons img, .footer-icons img{
 width:40px;
+height:40px;
 transition:.3s;
 }
 
+.contact-icons img:hover,
 .footer-icons img:hover{
 transform:translateY(-5px);
 }
 
+/* FOOTER */
+.footer{
+background:linear-gradient(to right,#08363f,#021f26);
+color:#fff;
+text-align:center;
+padding:90px 20px;
+margin-top:100px;
+}
+
+.footer h3{
+font-size:26px;
+margin-bottom:10px;
+}
+
+.footer p{
+opacity:.85;
+}
+
 @media(max-width:992px){
-.grid-2,.grid-3,.results-grid{
+.hero-grid,.grid-2,.grid-3,.grid-4,.results-grid{
 grid-template-columns:1fr;
 }
 h1{font-size:38px;}
+section{padding:90px 0;}
 }
 </style>
 </head>
-
 <body>
 
 <!-- NAVBAR -->
 <div class="navbar">
 <div class="container">
 <strong>Erwin Bolhano</strong>
-<div class="nav-links">
+<div>
 <a href="#about">About</a>
-<a href="#experience">Experience</a>
+<a href="#why">Why Outsource</a>
 <a href="#expertise">Expertise</a>
 <a href="#results">Results</a>
 <a href="#contact">Contact</a>
@@ -231,21 +264,37 @@ h1{font-size:38px;}
 
 <!-- HERO -->
 <section class="hero">
-<div class="container">
+<div class="container hero-grid">
 
-<h1>
-Dedicated Dental Insurance Support That Protects Your Revenue
-</h1>
+<div>
+<div class="badges">
+<span class="badge">Dental Insurance Expertise</span>
+<span class="badge">HIPAA Compliant</span>
+</div>
+
+<h1>Dental Insurance & Billing Support</h1>
 
 <p>
-I help U.S. dental practices reduce claims aging, prevent revenue leakage, and maintain accurate insurance documentation — without adding administrative burden to your in-house team.
+Helping dental practices verify insurance eligibility, monitor claims aging, and streamline billing workflows to maintain a healthy and predictable revenue cycle. I focus on reducing claim delays, preventing revenue leakage, and ensuring accurate insurance documentation so front office teams can operate efficiently and confidently.
 </p>
 
 <p>
-From daily insurance verification for scheduled, emergency, and walk-in patients to consistent follow-up on outstanding claims, I ensure your front office runs efficiently and your cash flow remains predictable.
+From scheduled appointments to emergency visits and walk-in patients, I ensure benefits are verified accurately, claims are followed up consistently, and outstanding balances are addressed proactively — helping practices improve cash flow without increasing in-house administrative workload.
 </p>
 
-<a href="#contact" class="btn">Schedule a Consultation</a>
+<a href="files/erwinbolhano_resume.pdf" class="btn" target="_blank">Download Resume</a>
+<a href="files/coe_erwinbolhano.pdf" class="btn" target="_blank" style="margin-left:15px;">View COE</a>
+</div>
+
+<div class="card" style="text-align:center;">
+<img src="image/profile.jpg" alt="Erwin Bolhano" style="width:180px;border-radius:16px;margin-bottom:20px;">
+<h3>Erwin Bolhano</h3>
+<p>Dental Insurance & Billing Support Specialist</p>
+<p style="margin-top:20px;color:var(--muted);">
+Cebu City, Philippines<br>
+Remote | U.S. Dental Practices
+</p>
+</div>
 
 </div>
 </section>
@@ -253,62 +302,69 @@ From daily insurance verification for scheduled, emergency, and walk-in patients
 <!-- ABOUT -->
 <section id="about">
 <div class="container">
-
-<p class="section-label">ABOUT</p>
-<h2>Your Revenue Cycle Support Partner</h2>
+<p class="section-label">ABOUT ME</p>
+<h2 class="section-title">Your Dental Revenue Cycle Support Partner</h2>
 
 <p class="section-description">
-Insurance inefficiencies silently impact production, scheduling, and collections. I provide structured insurance verification and claims aging follow-up so your team can focus on patient care — not chasing payers.
+I help dental offices reduce claim delays, prevent revenue leakage, and maintain accurate insurance documentation. My support ensures smooth front-office coordination, consistent claims aging follow-ups, and reliable insurance verification for scheduled, emergency, and walk-in patients.
 </p>
 
+<div class="grid-4" style="margin-top:40px;">
+<div class="card"><h3>Insurance Verification</h3><p>Eligibility verification for scheduled, emergency, and walk-in patients.</p></div>
+<div class="card"><h3>Claims Aging Support</h3><p>Monitor and follow up on outstanding insurance claims to reduce delays.</p></div>
+<div class="card"><h3>Billing Accuracy</h3><p>Maintain precise and HIPAA-compliant financial documentation.</p></div>
+<div class="card"><h3>Multi-Clinic Support</h3><p>Coordinate insurance workflows across multiple dental locations.</p></div>
+</div>
 </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" style="background:var(--light);">
+<!-- WHY OUTSOURCE -->
+<section id="why" style="background:var(--light);">
 <div class="container">
+<p class="section-label">WHY OUTSOURCE</p>
+<h2 class="section-title">Why Dental Practices Outsource Insurance & Billing</h2>
 
-<p class="section-label">EXPERIENCE</p>
-<h2>Professional Background</h2>
-
-<div class="grid-2">
-
+<div class="grid-2" style="margin-top:40px;">
 <div class="card">
-<h3>TOA Global – South Hills Dental Arts</h3>
-<p><strong>Insurance Verification Specialist</strong> | 2024–2026</p>
+<h3>For Practice Owners</h3>
 <ul>
-<li>Verified 50+ patients daily including emergency and walk-ins</li>
-<li>Managed 200+ claims weekly to reduce aging backlog</li>
-<li>Maintained 99% documentation accuracy</li>
-<li>Supported 5 clinic locations</li>
+<li>Reduce claims aging and denials</li>
+<li>Protect revenue and cash flow</li>
+<li>Prevent appointment disruptions</li>
+<li>Lower administrative overhead</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Firstsource Solutions Ltd.</h3>
-<p><strong>Healthcare Executive</strong> | 2022–2024</p>
+<h3>For Office Managers</h3>
 <ul>
-<li>High-volume payer communication</li>
-<li>Claims follow-up and appeals support</li>
-<li>Eligibility and authorization checks</li>
+<li>Clear insurance backlogs</li>
+<li>Reduce follow-up calls</li>
+<li>Improve team coordination</li>
+<li>Minimize billing-related patient concerns</li>
 </ul>
 </div>
-
 </div>
+
+<div class="case-study">
+<h3>Real-World Example (HIPAA-Safe)</h3>
+<p>
+After implementing dedicated insurance verification and claims aging support, a multi-location dental practice significantly reduced outstanding claims backlog and improved approval turnaround times — without increasing in-house staffing.
+</p>
+</div>
+
 </div>
 </section>
 
 <!-- EXPERTISE -->
 <section id="expertise">
 <div class="container">
+<p class="section-label">EXPERTISE</p>
+<h2 class="section-title">Systems, Payers & Tools I Work With</h2>
 
-<p class="section-label">SYSTEMS & TOOLS</p>
-<h2>Systems, Payers & Productivity Platforms</h2>
-
-<div class="grid-3">
-
+<div class="grid-3" style="margin-top:40px;">
 <div class="card">
-<h3>Dental Software</h3>
+<h3>EHR & Dental Software</h3>
 <ul>
 <li>Open Dental</li>
 <li>Adit Insurance</li>
@@ -316,25 +372,24 @@ Insurance inefficiencies silently impact production, scheduling, and collections
 </div>
 
 <div class="card">
-<h3>Major Payers</h3>
+<h3>Insurance Experience</h3>
 <ul>
 <li>Aetna</li>
 <li>Cigna</li>
 <li>Humana</li>
-<li>BCBS</li>
+<li>BCBS (All States)</li>
 <li>UnitedHealthcare</li>
-<li>Medicare Advantage</li>
+<li>Medicare & Medicare Advantage</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Productivity</h3>
+<h3>Productivity & Communication</h3>
 <ul>
 <li>Google Workspace</li>
 <li>Microsoft 365</li>
 </ul>
 </div>
-
 </div>
 </div>
 </section>
@@ -342,43 +397,49 @@ Insurance inefficiencies silently impact production, scheduling, and collections
 <!-- RESULTS -->
 <section id="results" style="background:var(--lighter);">
 <div class="container">
-
 <p class="section-label">RESULTS</p>
-<h2>What Practices Experience</h2>
+<h2 class="section-title">What Dental Practices Achieve</h2>
 
 <div class="results-grid">
-<div class="result-box">Reduced claims aging</div>
-<div class="result-box">Faster payer responses</div>
-<div class="result-box">Improved cash flow predictability</div>
-<div class="result-box">Accurate insurance verification</div>
-<div class="result-box">Lower front-office stress</div>
-<div class="result-box">Stronger revenue cycle stability</div>
+<div class="result-box">Faster claim resolutions</div>
+<div class="result-box">Reduced claims aging backlog</div>
+<div class="result-box">Improved approval turnaround</div>
+<div class="result-box">More accurate patient billing</div>
+<div class="result-box">Stronger cash flow stability</div>
+<div class="result-box">Reduced front office stress</div>
 </div>
 
+<div class="cta-box">
+<h3>Ready to streamline your insurance workflow?</h3>
+<p style="margin:15px 0;color:var(--muted);">
+Let me support your practice with consistent insurance verification and claims follow-up.
+</p>
+<a href="mailto:erwinjade24@gmail.com" class="btn">Contact Me</a>
+</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <div class="container">
+<p class="section-label">GET IN TOUCH</p>
+<h2 class="section-title">Let’s Connect</h2>
 
-<p class="section-label">CONTACT</p>
-<h2>Let’s Strengthen Your Insurance Workflow</h2>
+<div class="card" style="text-align:center;margin-top:40px;">
+<p><strong>Email:</strong> erwinjade24@gmail.com</p>
+<p><strong>WhatsApp:</strong> +639243733050</p>
+<p><strong>LinkedIn:</strong> @zcxwin</p>
 
-<p class="section-description">
-If insurance verification and aging claims are slowing your practice down, let’s discuss how I can support your team remotely.
-</p>
-
-<div style="text-align:center;margin-top:40px;">
-<a href="mailto:erwinjade24@gmail.com" class="btn">Email Me</a>
+<div class="contact-icons">
+<a href="mailto:erwinjade24@gmail.com"><img src="icon/gmail.png"></a>
+<a href="https://wa.me/639243733050" target="_blank"><img src="icon/whatsapp.png"></a>
+<a href="https://linkedin.com/in/zcxwin" target="_blank"><img src="icon/linkedin.png"></a>
 </div>
-
 </div>
 </section>
 
 <!-- FOOTER -->
 <div class="footer">
-
 <h3>Erwin Bolhano</h3>
 <p>Dental Insurance & Billing Support Specialist</p>
 
@@ -389,7 +450,6 @@ If insurance verification and aging claims are slowing your practice down, let�
 </div>
 
 <p>© 2026 All rights reserved</p>
-
 </div>
 
 </body>
