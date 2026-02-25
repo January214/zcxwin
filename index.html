@@ -4,24 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erwin Bolhano | Dental Insurance Verification Specialist</title>
+<title>Erwin Bolhano | Dental Insurance Verification & Billing Specialist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* VARIABLES */
-
 :root{
 --primary:#1f4f59;
+--accent:#2c7a7b;
 --light:#f4f7f9;
 --lighter:#f8fafc;
 --text:#111827;
 --muted:#6b7280;
 --border:#e5e7eb;
 }
-
-/* BASE */
 
 *{
 margin:0;
@@ -31,8 +28,9 @@ box-sizing:border-box;
 
 body{
 font-family:Inter,sans-serif;
-color:var(--text);
 background:#f9fbfc;
+color:var(--text);
+line-height:1.6;
 }
 
 .container{
@@ -43,10 +41,6 @@ padding:0 20px;
 
 section{
 padding:90px 0;
-}
-
-h1,h2,h3{
-font-family:'Playfair Display',serif;
 }
 
 /* NAVBAR */
@@ -70,15 +64,29 @@ align-items:center;
 }
 
 .logo{
-font-weight:600;
+font-weight:700;
+color:var(--primary);
 }
 
-.nav-btn{
+.nav-menu{
+display:flex;
+gap:25px;
+}
+
+.nav-menu a{
+text-decoration:none;
+color:#374151;
+font-size:14px;
+font-weight:500;
+}
+
+.connect-btn{
 background:var(--primary);
 color:white;
 padding:10px 18px;
 border-radius:8px;
 text-decoration:none;
+font-weight:600;
 }
 
 /* HERO */
@@ -90,159 +98,132 @@ background:linear-gradient(to right,#f8fafc,#eef3f5);
 
 .hero-grid{
 display:grid;
-grid-template-columns:1.3fr .7fr;
-gap:60px;
+grid-template-columns:1.2fr .8fr;
+gap:40px;
 align-items:center;
 }
 
+.badges{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+flex-wrap:wrap;
+}
+
 .badge{
-display:inline-block;
 background:#e6f2f4;
 color:var(--primary);
 padding:6px 14px;
 border-radius:999px;
 font-size:13px;
-font-weight:600;
+font-weight:500;
 }
 
-.hero-title{
-font-size:46px;
-margin:20px 0;
-line-height:1.2;
-}
-
-.hero-description{
-color:var(--muted);
-margin-bottom:25px;
-line-height:1.7;
-}
-
-.hero-buttons{
-display:flex;
-gap:15px;
-margin-bottom:25px;
-}
-
-.primary-btn{
-background:var(--primary);
-color:white;
-padding:12px 24px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-}
-
-.secondary-btn{
-border:1px solid var(--primary);
-color:var(--primary);
-padding:12px 24px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
+.hero h1{
+font-size:44px;
+margin-bottom:20px;
+font-family:'Playfair Display',serif;
 }
 
 .hero-proof{
-display:grid;
-gap:8px;
+margin:20px 0;
 }
 
-.hero-card{
-background:white;
-padding:30px;
-border-radius:14px;
-border:1px solid var(--border);
-text-align:center;
+.hero-proof div{
+margin-bottom:8px;
+font-weight:500;
 }
 
-.hero-card img{
-width:120px;
-height:120px;
-border-radius:12px;
-object-fit:cover;
-margin-bottom:15px;
-}
-
-.hero-role{
-color:var(--muted);
-margin-bottom:15px;
-}
-
-.card-btn{
+.btn{
 background:var(--primary);
 color:white;
-padding:10px 20px;
+padding:12px 22px;
 border-radius:8px;
 text-decoration:none;
+font-weight:600;
 display:inline-block;
+margin-top:10px;
 }
 
-/* SECTION TITLES */
+/* CARD */
+
+.card{
+background:white;
+border:1px solid var(--border);
+border-radius:12px;
+padding:25px;
+}
+
+/* SECTIONS */
 
 .section-label{
 text-align:center;
+color:var(--primary);
 font-size:13px;
 letter-spacing:2px;
-color:var(--primary);
 margin-bottom:10px;
-font-weight:600;
 }
 
 .section-title{
 text-align:center;
-font-size:34px;
+font-size:32px;
 margin-bottom:20px;
+font-family:'Playfair Display',serif;
 }
 
 .section-description{
 text-align:center;
-max-width:750px;
+max-width:700px;
 margin:auto;
 color:var(--muted);
 }
 
-/* METRICS */
-
-.metrics-grid{
+.grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
 gap:25px;
 margin-top:40px;
 }
 
+.grid-4{
+grid-template-columns:repeat(4,1fr);
+}
+
+.grid-3{
+grid-template-columns:repeat(3,1fr);
+}
+
+.grid-2{
+grid-template-columns:repeat(2,1fr);
+}
+
+/* METRICS */
+
 .metric{
 background:white;
-padding:30px;
-border-radius:14px;
+padding:25px;
+border-radius:12px;
 border:1px solid var(--border);
 text-align:center;
 }
 
 .metric h3{
-font-size:32px;
+font-size:28px;
 color:var(--primary);
-}
-
-.metric p{
-color:var(--muted);
+margin-bottom:5px;
 }
 
 /* EXPERIENCE */
 
-.exp-grid{
-display:grid;
-gap:25px;
-margin-top:40px;
-}
-
-.exp-card{
+.exp-block{
 background:white;
-padding:30px;
-border-radius:14px;
+padding:25px;
+border-radius:12px;
 border:1px solid var(--border);
 }
 
-.exp-role{
-font-size:20px;
+.exp-title{
+font-weight:700;
+font-size:18px;
 margin-bottom:5px;
 }
 
@@ -252,41 +233,20 @@ font-weight:600;
 margin-bottom:10px;
 }
 
-.exp-desc{
-color:var(--muted);
-line-height:1.7;
-}
-
-/* TOOLS */
-
-.tools-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:40px;
-}
-
-.tool-card{
-background:white;
-padding:25px;
-border-radius:14px;
-border:1px solid var(--border);
-}
-
-.tool-card ul{
-margin-top:10px;
+.exp-block ul{
 padding-left:18px;
 color:var(--muted);
 }
 
-/* CTA */
+/* TOOLS */
 
-.cta{
-background:var(--light);
-border-radius:16px;
-padding:50px;
+.tool{
+background:white;
+padding:15px;
+border-radius:10px;
+border:1px solid var(--border);
 text-align:center;
-margin-top:40px;
+font-weight:500;
 }
 
 /* FOOTER */
@@ -295,11 +255,9 @@ margin-top:40px;
 background:#0f2e35;
 color:white;
 text-align:center;
-padding:50px 20px;
-margin-top:60px;
+padding:40px;
+margin-top:40px;
 }
-
-/* RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -307,37 +265,41 @@ margin-top:60px;
 grid-template-columns:1fr;
 }
 
-.metrics-grid{
+.grid-4,.grid-3,.grid-2{
 grid-template-columns:1fr;
 }
 
-.tools-grid{
-grid-template-columns:1fr;
+.nav-menu{
+display:none;
 }
 
 }
 
 </style>
-
 </head>
 <body>
 
 <!-- NAVBAR -->
 
 <div class="navbar">
-
 <div class="nav-inner">
 
 <div class="logo">
 Erwin Bolhano
 </div>
 
-<a href="mailto:erwinjade24@gmail.com" class="nav-btn">
-Contact
+<div class="nav-menu">
+<a href="#metrics">Metrics</a>
+<a href="#experience">Experience</a>
+<a href="#tools">Systems</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="mailto:erwinjade24@gmail.com" class="connect-btn">
+Contact Me
 </a>
 
 </div>
-
 </div>
 
 <!-- HERO -->
@@ -348,58 +310,42 @@ Contact
 
 <div>
 
-<div class="badge">
-DENTAL INSURANCE VERIFICATION SPECIALIST
+<div class="badges">
+<span class="badge">Dental Insurance Specialist</span>
+<span class="badge">Revenue Cycle Support</span>
+<span class="badge">HIPAA Compliant</span>
 </div>
 
-<h1 class="hero-title">
-Supporting US Dental Practices with Accurate Insurance Verification & Claims Support
+<h1>
+Dental Insurance Verification & Billing Specialist Supporting US Dental Practices
 </h1>
 
-<p class="hero-description">
-Nearly 2 years supporting US dental clinics with insurance verification, claims follow-ups, and billing coordination. Proven ability to manage high patient volume while maintaining accuracy, compliance, and efficiency.
+<p>
+I help dental clinics verify insurance faster, reduce claim delays, and improve revenue cycle efficiency through accurate eligibility verification and claims follow-ups.
 </p>
-
-<div class="hero-buttons">
-
-<a href="#" class="primary-btn">
-Download Resume
-</a>
-
-<a href="#" class="secondary-btn">
-View Certificates
-</a>
-
-</div>
 
 <div class="hero-proof">
 
-<div><strong>80+ patients verified daily</strong></div>
-<div><strong>200+ claims handled weekly</strong></div>
-<div><strong>Multi-location dental practice support</strong></div>
-<div><strong>Remote support for US dental offices</strong></div>
+<div>✔ Verified 50–80 patients daily across multiple dental clinics</div>
+<div>✔ Managed 200+ insurance claims weekly</div>
+<div>✔ Supported US dental offices remotely</div>
+<div>✔ Reduced delays through accurate verification & follow-ups</div>
 
 </div>
 
+<a href="#" class="btn">Download Resume</a>
+
 </div>
 
-<div class="hero-card">
+<div class="card">
 
-<img src="images/profile.jpg">
+<h3>Professional Summary</h3>
 
-<h3>Erwin Bolhano</h3>
+<p style="margin-top:10px;color:var(--muted);">
 
-<p class="hero-role">
-Dental Insurance Verification Specialist
+Dental insurance verification specialist with nearly 2 years of experience supporting US dental practices. Skilled in eligibility verification, claims follow-up, and revenue cycle support using industry-standard dental software.
+
 </p>
-
-<p class="hero-role">
-Philippines | Remote
-</p>
-
-<a href="mailto:erwinjade24@gmail.com" class="card-btn">
-Contact Me
-</a>
 
 </div>
 
@@ -409,19 +355,14 @@ Contact Me
 
 <!-- METRICS -->
 
-<section>
+<section id="metrics">
 
 <div class="container">
 
-<div class="section-label">
-METRICS
-</div>
+<div class="section-label">PERFORMANCE METRICS</div>
+<div class="section-title">Proven Impact</div>
 
-<h2 class="section-title">
-Proven Performance Supporting Dental Practices
-</h2>
-
-<div class="metrics-grid">
+<div class="grid grid-4">
 
 <div class="metric">
 <h3>80+</h3>
@@ -434,13 +375,13 @@ Proven Performance Supporting Dental Practices
 </div>
 
 <div class="metric">
-<h3>2 Years</h3>
-<p>Dental insurance experience</p>
+<h3>Multi-clinic</h3>
+<p>Dental practice support</p>
 </div>
 
 <div class="metric">
-<h3>US-Based</h3>
-<p>Dental practice support</p>
+<h3>US-based</h3>
+<p>Dental offices supported</p>
 </div>
 
 </div>
@@ -451,23 +392,18 @@ Proven Performance Supporting Dental Practices
 
 <!-- EXPERIENCE -->
 
-<section>
+<section id="experience">
 
 <div class="container">
 
-<div class="section-label">
-EXPERIENCE
-</div>
+<div class="section-label">PROFESSIONAL EXPERIENCE</div>
+<div class="section-title">Dental Revenue Cycle Experience</div>
 
-<h2 class="section-title">
-Professional Experience
-</h2>
+<div class="grid grid-2">
 
-<div class="exp-grid">
+<div class="exp-block">
 
-<div class="exp-card">
-
-<div class="exp-role">
+<div class="exp-title">
 Dental Insurance Verification Specialist
 </div>
 
@@ -475,15 +411,23 @@ Dental Insurance Verification Specialist
 TOA Global | South Hills Dental Arts
 </div>
 
-<div class="exp-desc">
-Verified insurance eligibility, benefits, and patient responsibility for scheduled patients. Handled high-volume verification workflows while maintaining documentation accuracy and compliance.
-</div>
+<ul>
+
+<li>Verified insurance eligibility and benefits for 50–80 patients daily</li>
+
+<li>Reviewed coverage including deductibles, frequencies, and limitations</li>
+
+<li>Supported multiple dental providers and locations</li>
+
+<li>Reduced claim issues through accurate verification</li>
+
+</ul>
 
 </div>
 
-<div class="exp-card">
+<div class="exp-block">
 
-<div class="exp-role">
+<div class="exp-title">
 Healthcare Executive
 </div>
 
@@ -491,9 +435,17 @@ Healthcare Executive
 Firstsource Solutions
 </div>
 
-<div class="exp-desc">
-Supported US healthcare providers with eligibility verification, claims status checks, and insurance coordination. Ensured accurate documentation and efficient workflow support.
-</div>
+<ul>
+
+<li>Handled eligibility verification and insurance coordination</li>
+
+<li>Performed claims status checks and follow-ups</li>
+
+<li>Communicated with insurance providers</li>
+
+<li>Maintained accurate documentation</li>
+
+</ul>
 
 </div>
 
@@ -505,56 +457,27 @@ Supported US healthcare providers with eligibility verification, claims status c
 
 <!-- SYSTEMS -->
 
-<section>
+<section id="tools">
 
 <div class="container">
 
-<div class="section-label">
-SYSTEMS & TOOLS
+<div class="section-label">SYSTEMS & TOOLS</div>
+
+<div class="section-title">
+Dental Software & Platforms
 </div>
 
-<h2 class="section-title">
-Software, Insurance, and Tools
-</h2>
+<div class="grid grid-3">
 
-<div class="tools-grid">
-
-<div class="tool-card">
-
-<h3>Dental Software</h3>
-
-<ul>
-<li>Open Dental</li>
-<li>Adit</li>
-</ul>
-
-</div>
-
-<div class="tool-card">
-
-<h3>Insurance Providers</h3>
-
-<ul>
-<li>Aetna</li>
-<li>Cigna</li>
-<li>Humana</li>
-<li>UnitedHealthcare</li>
-<li>BCBS</li>
-</ul>
-
-</div>
-
-<div class="tool-card">
-
-<h3>Tools</h3>
-
-<ul>
-<li>Google Workspace</li>
-<li>Microsoft Office</li>
-<li>Remote communication tools</li>
-</ul>
-
-</div>
+<div class="tool">Open Dental</div>
+<div class="tool">Dentrix</div>
+<div class="tool">Eaglesoft</div>
+<div class="tool">PPO Portals</div>
+<div class="tool">Insurance Websites</div>
+<div class="tool">Google Workspace</div>
+<div class="tool">Excel</div>
+<div class="tool">Practice Management Software</div>
+<div class="tool">Clearinghouses</div>
 
 </div>
 
@@ -562,26 +485,25 @@ Software, Insurance, and Tools
 
 </section>
 
-<!-- CTA -->
+<!-- CONTACT -->
 
-<section>
+<section id="contact">
 
 <div class="container">
 
-<div class="cta">
-
-<h2>
-Available for Remote Dental Insurance Verification Roles
-</h2>
+<div class="section-label">CONTACT</div>
+<div class="section-title">Let's Work Together</div>
 
 <p class="section-description">
-Helping dental practices improve insurance workflows, reduce delays, and support revenue cycle efficiency.
+
+Available for remote dental insurance verification and billing support roles.
+
 </p>
 
-<br>
+<div style="text-align:center;margin-top:20px;">
 
-<a href="mailto:erwinjade24@gmail.com" class="primary-btn">
-Contact Me
+<a href="mailto:erwinjade24@gmail.com" class="btn">
+Email Me
 </a>
 
 </div>
@@ -594,16 +516,16 @@ Contact Me
 
 <div class="footer">
 
-<h3>
-Erwin Bolhano
-</h3>
-
 <p>
-Dental Insurance Verification Specialist
+Erwin Bolhano
 </p>
 
-<p>
-© 2026 Erwin Bolhano
+<p style="margin-top:10px;">
+Dental Insurance Verification & Billing Specialist
+</p>
+
+<p style="margin-top:10px;">
+Philippines | Remote
 </p>
 
 </div>
