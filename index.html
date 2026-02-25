@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Erwin Bolhano | Dental Insurance & Billing Support Specialist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -18,12 +20,16 @@
 --border:#e5e7eb;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:Inter,sans-serif;
-color:var(--text);
 background:#f9fbfc;
+color:var(--text);
 }
 
 .container{
@@ -33,89 +39,64 @@ padding:0 20px;
 }
 
 section{
-padding:80px 0;
+padding:90px 0;
 }
 
-h1,h2,h3{
-font-family:'Playfair Display',serif;
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:#f1f5f7;
+border-bottom:1px solid var(--border);
+z-index:999;
 }
 
-.section-label{
-text-align:center;
-font-size:13px;
-letter-spacing:2px;
-color:var(--primary);
+.nav-inner{
+max-width:1150px;
+margin:auto;
+padding:14px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+background:#e5e7eb;
+padding:8px 14px;
+border-radius:10px;
 font-weight:600;
-margin-bottom:10px;
+font-size:14px;
 }
 
-.section-title{
-text-align:center;
-font-size:36px;
-margin-bottom:20px;
+.nav-menu{
+display:flex;
+gap:30px;
 }
 
-.section-description{
-text-align:center;
-max-width:850px;
-margin:0 auto 20px;
-color:var(--muted);
-line-height:1.8;
+.nav-menu a{
+text-decoration:none;
+color:#374151;
+font-weight:500;
+font-size:14px;
 }
 
-.btn{
-display:inline-block;
+.connect-btn{
 background:var(--primary);
-color:#fff;
-padding:12px 20px;
+color:white;
+padding:10px 18px;
 border-radius:10px;
 text-decoration:none;
 font-weight:600;
-margin-top:10px;
+font-size:14px;
 }
 
-.card{
-background:#fff;
-border:1px solid var(--border);
-border-radius:16px;
-padding:30px;
-}
-
-.grid-2{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-}
-
-.grid-3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.grid-4{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.metric-box{
-background:#fff;
-border:1px solid var(--border);
-padding:20px;
-border-radius:14px;
-text-align:center;
-}
-
-.metric-box strong{
-font-size:22px;
-display:block;
-margin-bottom:5px;
-color:var(--primary);
-}
+/* HERO */
 
 .hero{
 background:linear-gradient(to right,#f8fafc,#eef3f5);
+margin-top:70px;
 }
 
 .hero-grid{
@@ -139,208 +120,278 @@ border-radius:999px;
 font-size:13px;
 }
 
+.hero h1{
+font-size:46px;
+margin-bottom:20px;
+font-family:'Playfair Display',serif;
+}
+
+.hero p{
+color:var(--muted);
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.btn{
+background:var(--primary);
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+margin-right:10px;
+}
+
+.card{
+background:white;
+border:1px solid var(--border);
+border-radius:16px;
+padding:30px;
+}
+
+/* SECTIONS */
+
+.section-label{
+text-align:center;
+font-size:13px;
+letter-spacing:2px;
+color:var(--primary);
+margin-bottom:10px;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:20px;
+font-family:'Playfair Display',serif;
+}
+
+.section-description{
+text-align:center;
+max-width:750px;
+margin:auto;
+color:var(--muted);
+line-height:1.8;
+}
+
+.grid{
+display:grid;
+gap:25px;
+margin-top:40px;
+}
+
+.grid-3{
+grid-template-columns:repeat(3,1fr);
+}
+
+.grid-2{
+grid-template-columns:repeat(2,1fr);
+}
+
+.result-box{
+background:white;
+border:1px solid var(--border);
+padding:20px;
+border-radius:12px;
+text-align:center;
+}
+
 .footer{
-background:linear-gradient(to right,#08363f,#021f26);
-color:#fff;
+background:#0f2e35;
+color:white;
 text-align:center;
 padding:60px 20px;
 margin-top:60px;
 }
 
-@media(max-width:992px){
-.hero-grid,.grid-2,.grid-3,.grid-4{
+.footer img{
+width:32px;
+margin:10px;
+}
+
+@media(max-width:900px){
+
+.hero-grid{
 grid-template-columns:1fr;
 }
+
+.grid-3,.grid-2{
+grid-template-columns:1fr;
+}
+
+.nav-menu{
+display:none;
+}
+
 }
 
 </style>
 </head>
-
 <body>
 
+<!-- NAVBAR -->
+
+<div class="navbar">
+<div class="nav-inner">
+
+<div class="logo">
+EB
+</div>
+
+<div class="nav-menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="mailto:erwinjade24@gmail.com" class="connect-btn">
+Let's Connect
+</a>
+
+</div>
+</div>
+
 <!-- HERO -->
-<section class="hero">
+
+<section class="hero" id="home">
+
 <div class="container hero-grid">
 
 <div>
 
 <div class="badges">
-<span class="badge">US Dental Insurance Experience</span>
-<span class="badge">Claims Aging & Follow-Ups</span>
+<span class="badge">Dental Insurance Specialist</span>
 <span class="badge">HIPAA Compliant</span>
 </div>
 
-<h1>Dental Insurance & Billing Support for U.S. Dental Practices</h1>
+<h1>
+Dental Insurance & Billing Support
+</h1>
 
 <p>
-I help dental clinics verify insurance eligibility, monitor claims aging, and follow up on outstanding insurance balances to ensure consistent cash flow and prevent revenue delays.
+I help dental practices verify insurance eligibility, reduce claims aging, and improve billing workflow efficiency. My work ensures accurate benefit verification, timely claims follow-ups, and reliable insurance documentation.
 </p>
 
 <p>
-Experienced in supporting high-volume dental offices remotely, ensuring accurate verification, timely claim follow-ups, and clear documentation aligned with insurance payer requirements.
+Experienced supporting multi-location dental clinics, verifying 50+ patients daily and managing 200+ claims weekly while maintaining high documentation accuracy and compliance.
 </p>
 
-<a href="#">Resume</a><br>
-<a href="#">COE</a>
+<a href="#" class="btn">Download Resume</a>
+<a href="#" class="btn">View Certificates</a>
 
 </div>
 
 <div class="card" style="text-align:center;">
 
-<img src="images/profile.jpg" style="width:160px;border-radius:12px;margin-bottom:15px;">
+<img src="images/profile.jpg" style="width:150px;border-radius:12px;margin-bottom:15px;">
 
 <h3>Erwin Bolhano</h3>
 
 <p>Dental Insurance & Billing Support Specialist</p>
 
-<p style="margin-top:15px;color:var(--muted);">
-Remote | Supporting U.S. Dental Practices<br>
-Philippines
+<p style="color:var(--muted);margin-top:10px;">
+Philippines | Remote
 </p>
 
 </div>
 
 </div>
+
 </section>
 
-<!-- METRICS -->
-<section>
+<!-- ABOUT -->
+
+<section id="about">
+
 <div class="container">
 
-<p class="section-label">KEY PERFORMANCE</p>
-<h2 class="section-title">Operational Impact</h2>
+<div class="section-label">ABOUT</div>
 
-<div class="grid-4">
-
-<div class="metric-box">
-<strong>50+</strong>
-Patients Verified Daily
+<div class="section-title">
+Revenue Cycle Support for Dental Practices
 </div>
 
-<div class="metric-box">
-<strong>200+</strong>
-Claims Managed Weekly
-</div>
-
-<div class="metric-box">
-<strong>5</strong>
-Dental Clinics Supported
-</div>
-
-<div class="metric-box">
-<strong>U.S.</strong>
-Insurance Providers Supported
-</div>
+<p class="section-description">
+I specialize in dental insurance verification, claims follow-up, and billing support. My goal is to reduce delays, prevent revenue leakage, and help dental offices maintain efficient insurance workflows.
+</p>
 
 </div>
 
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-label">SERVICES</div>
+
+<div class="section-title">
+How I Support Dental Practices
 </div>
+
+<div class="grid grid-3">
+
+<div class="card">
+<h3>Insurance Verification</h3>
+<p>Verify coverage, benefits, and patient responsibility.</p>
+</div>
+
+<div class="card">
+<h3>Claims Follow-Up</h3>
+<p>Monitor and resolve outstanding claims efficiently.</p>
+</div>
+
+<div class="card">
+<h3>Revenue Cycle Support</h3>
+<p>Help maintain accurate billing and payment workflows.</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- EXPERIENCE -->
-<section style="background:var(--light);">
+
+<section id="experience">
 
 <div class="container">
 
-<p class="section-label">PROFESSIONAL EXPERIENCE</p>
-<h2 class="section-title">Dental Insurance & Revenue Cycle Experience</h2>
+<div class="section-label">EXPERIENCE</div>
 
-<div class="grid-2">
+<div class="section-title">
+Professional Experience
+</div>
+
+<div class="grid grid-2">
 
 <div class="card">
 
-<h3>Dental Insurance Verification Specialist</h3>
+<h3>Insurance Verification Specialist</h3>
 
-<p style="color:var(--muted);margin-bottom:10px;">
-TOA Global • Supporting South Hills Dental Arts
+<p>TOA Global | South Hills Dental Arts</p>
+
+<p style="color:var(--muted);">
+Verified 50+ patients daily and managed 200+ claims weekly across multiple dental clinics.
 </p>
 
-<ul>
-
-<li>Verified insurance eligibility, benefits, and limitations for scheduled and emergency patients</li>
-
-<li>Reviewed coverage details including frequency, deductibles, and annual maximums</li>
-
-<li>Ensured accurate documentation before procedures</li>
-
-<li>Supported multiple dental providers and front office teams remotely</li>
-
-</ul>
-
 </div>
 
 <div class="card">
 
-<h3>Healthcare Customer Service Associate</h3>
+<h3>Healthcare Executive</h3>
 
-<p style="color:var(--muted);margin-bottom:10px;">
-Firstsource Solutions • U.S. Healthcare Accounts
+<p>Firstsource Solutions</p>
+
+<p style="color:var(--muted);">
+Handled eligibility checks, claims status, and insurance coordination with US providers.
 </p>
-
-<ul>
-
-<li>Handled insurance verification and claim inquiries</li>
-
-<li>Supported U.S. healthcare providers and patients</li>
-
-<li>Maintained HIPAA-compliant documentation</li>
-
-<li>Resolved insurance-related issues and billing concerns</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SYSTEMS -->
-<section>
-
-<div class="container">
-
-<p class="section-label">SYSTEMS & TOOLS</p>
-<h2 class="section-title">Software & Insurance Platforms</h2>
-
-<div class="grid-3">
-
-<div class="card">
-
-<h3>Dental Software</h3>
-
-<ul>
-<li>Open Dental</li>
-<li>Adit Insurance</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Insurance Providers</h3>
-
-<ul>
-<li>Aetna</li>
-<li>Cigna</li>
-<li>Humana</li>
-<li>BCBS</li>
-<li>UnitedHealthcare</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Productivity Tools</h3>
-
-<ul>
-<li>Google Workspace</li>
-<li>Microsoft 365</li>
-<li>Excel</li>
-</ul>
 
 </div>
 
@@ -351,26 +402,58 @@ Firstsource Solutions • U.S. Healthcare Accounts
 </section>
 
 <!-- RESULTS -->
-<section style="background:var(--lighter);">
+
+<section>
 
 <div class="container">
 
-<p class="section-label">RESULTS</p>
-<h2 class="section-title">What Dental Practices Achieve</h2>
+<div class="section-label">RESULTS</div>
 
-<div class="grid-3">
+<div class="section-title">
+Impact for Dental Practices
+</div>
 
-<div class="card">Reduced claims aging backlog</div>
+<div class="grid grid-3">
 
-<div class="card">Improved insurance verification accuracy</div>
+<div class="result-box">
+Reduced claims aging
+</div>
 
-<div class="card">Faster claim resolution timelines</div>
+<div class="result-box">
+Improved cash flow
+</div>
 
-<div class="card">Improved front office efficiency</div>
+<div class="result-box">
+Faster insurance verification
+</div>
 
-<div class="card">Better insurance documentation accuracy</div>
+</div>
 
-<div class="card">Stronger revenue cycle performance</div>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-label">CONTACT</div>
+
+<div class="section-title">
+Let's Work Together
+</div>
+
+<p class="section-description">
+Available for remote dental insurance verification and billing support roles.
+</p>
+
+<div style="text-align:center;margin-top:20px;">
+
+<a href="mailto:erwinjade24@gmail.com" class="btn">
+Email Me
+</a>
 
 </div>
 
@@ -386,13 +469,20 @@ Firstsource Solutions • U.S. Healthcare Accounts
 
 <p>Dental Insurance & Billing Support Specialist</p>
 
-<p>Supporting U.S. Dental Practices Remotely</p>
+<a href="mailto:erwinjade24@gmail.com">
+<img src="icons/gmail.png">
+</a>
 
-<p style="margin-top:15px;">
-Contact: erwinjade24@gmail.com
+<a href="https://linkedin.com/in/zcxwin">
+<img src="icons/linkedin.png">
+</a>
+
+<p style="margin-top:20px;">
+© 2026 Erwin Bolhano
 </p>
 
 </div>
 
 </body>
 </html>
+```
