@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erwin Bolhano | Dental Insurance Verification & Billing Specialist</title>
+<title>Erwin Bolhano | Healthcare Insurance & Revenue Cycle Specialist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
@@ -20,11 +20,7 @@
   --border:#e5e7eb;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:Inter,sans-serif;
@@ -39,9 +35,7 @@ body{
   padding:0 20px;
 }
 
-section{
-  padding:90px 0;
-}
+section{padding:90px 0;}
 
 /* NAVBAR */
 
@@ -120,18 +114,19 @@ section{
 }
 
 .hero h1{
-  font-size:44px;
+  font-size:42px;
   margin-bottom:20px;
   font-family:'Playfair Display',serif;
 }
 
-.hero-proof{
-  margin:20px 0;
-}
-
-.hero-proof div{
-  margin-bottom:8px;
-  font-weight:500;
+.hero-summary{
+  background:#eef3f5;
+  padding:18px 20px;
+  border-radius:12px;
+  color:var(--muted);
+  margin-top:20px;
+  font-size:15px;
+  border:1px solid var(--border);
 }
 
 .btn{
@@ -142,22 +137,10 @@ section{
   text-decoration:none;
   font-weight:600;
   display:inline-block;
-  margin-top:10px;
-}
-
-/* Hero professional summary styling */
-.hero-summary {
-  background:#eef3f5;       /* subtle light background */
-  padding:18px 20px;
-  border-radius:12px;
-  color:var(--muted);
   margin-top:20px;
-  font-size:15px;
-  line-height:1.5;
-  border:1px solid var(--border);
 }
 
-/* SECTIONS */
+/* TITLES */
 
 .section-label{
   text-align:center;
@@ -187,17 +170,9 @@ section{
   margin-top:40px;
 }
 
-.grid-4{
-  grid-template-columns:repeat(4,1fr);
-}
-
-.grid-3{
-  grid-template-columns:repeat(3,1fr);
-}
-
-.grid-2{
-  grid-template-columns:repeat(2,1fr);
-}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
 
 /* METRICS */
 
@@ -210,9 +185,8 @@ section{
 }
 
 .metric h3{
-  font-size:28px;
+  font-size:22px;
   color:var(--primary);
-  margin-bottom:5px;
 }
 
 /* EXPERIENCE */
@@ -227,7 +201,6 @@ section{
 .exp-title{
   font-weight:700;
   font-size:18px;
-  margin-bottom:5px;
 }
 
 .exp-company{
@@ -241,7 +214,7 @@ section{
   color:var(--muted);
 }
 
-/* TOOLS */
+/* TOOL CARDS */
 
 .tool{
   background:white;
@@ -250,6 +223,25 @@ section{
   border:1px solid var(--border);
   text-align:center;
   font-weight:500;
+}
+
+/* CONTACT */
+
+.contact-icons{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:30px;
+}
+
+.contact-icons img{
+  width:45px;
+  height:45px;
+  transition:.2s;
+}
+
+.contact-icons img:hover{
+  transform:scale(1.1);
 }
 
 /* FOOTER */
@@ -263,248 +255,134 @@ section{
 }
 
 @media(max-width:900px){
-
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  .grid-4,.grid-3,.grid-2{
-    grid-template-columns:1fr;
-  }
-
-  .nav-menu{
-    display:none;
-  }
-
+  .hero-grid{grid-template-columns:1fr;}
+  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr;}
 }
 
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-
-<div class="navbar">
-  <div class="nav-inner">
-
-    <div class="logo">
-      Erwin Bolhano
-    </div>
-
-    <div class="nav-menu">
-      <a href="#metrics">Metrics</a>
-      <a href="#experience">Experience</a>
-      <a href="#tools">Systems</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <a href="mailto:erwinjade24@gmail.com" class="connect-btn">
-      Contact Me
-    </a>
-
-  </div>
-</div>
-
 <!-- HERO -->
 
 <section class="hero">
+<div class="container hero-grid">
+<div>
 
-  <div class="container hero-grid">
+<div class="badges">
+<span class="badge">Healthcare Insurance Specialist</span>
+<span class="badge">Medical & Dental Revenue Cycle</span>
+<span class="badge">Claims & Authorization Specialist</span>
+<span class="badge">HIPAA Compliant</span>
+</div>
 
-    <div>
+<h1>
+Healthcare Insurance Verification & Revenue Cycle Specialist
+</h1>
 
-      <div class="badges">
-        <span class="badge">Dental Insurance Specialist</span>
-        <span class="badge">Revenue Cycle Support</span>
-        <span class="badge">HIPAA Compliant</span>
-      </div>
+<p>
+Supporting medical and dental providers with eligibility verification, claims follow-up, prior authorization tracking, and insurance coordination to improve revenue cycle efficiency.
+</p>
 
-      <h1>
-        Dental Insurance Verification & Billing Support Specialist – US Dental Practices
-      </h1>
+<div class="hero-summary">
+Nearly 2 years of experience supporting US healthcare providers. Skilled in high-volume inbound calls, eligibility verification, claims tracking, prior authorization, appeals support, and insurance communication.
+</div>
 
-      <p>
-        I help dental clinics verify insurance faster, reduce claim delays, and improve revenue cycle efficiency through accurate eligibility verification and claims follow-ups.
-      </p>
+<a href="#" class="btn">Download Resume</a>
 
-      <div class="hero-proof">
-
-        <div>✔ Verified 50–80 patients daily across multiple dental clinics</div>
-        <div>✔ Managed 200+ insurance claims weekly</div>
-        <div>✔ Supported US dental offices remotely</div>
-        <div>✔ Reduced delays through accurate verification & follow-ups</div>
-
-      </div>
-
-      <!-- Professional Summary styled -->
-      <div class="hero-summary">
-        Dental insurance verification specialist with nearly 2 years of experience supporting US dental practices. Skilled in eligibility verification, claims follow-up, and revenue cycle support using industry-standard dental software.
-      </div>
-
-      <a href="#" class="btn">Resume</a>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 <!-- METRICS -->
 
-<section id="metrics">
+<section>
+<div class="container">
 
-  <div class="container">
+<div class="section-label">PERFORMANCE METRICS</div>
+<div class="section-title">Proven Healthcare Impact</div>
 
-    <div class="section-label">PERFORMANCE METRICS</div>
-    <div class="section-title">Proven Impact</div>
+<div class="grid grid-4">
 
-    <div class="grid grid-4">
+<div class="metric"><h3>50–80+</h3><p>Patients verified daily</p></div>
+<div class="metric"><h3>200+</h3><p>Claims followed up weekly</p></div>
+<div class="metric"><h3>60–100</h3><p>Inbound calls handled daily</p></div>
+<div class="metric"><h3>High Accuracy</h3><p>HIPAA-compliant documentation</p></div>
+<div class="metric"><h3>Multi-Clinic</h3><p>Providers supported remotely</p></div>
+<div class="metric"><h3>US Healthcare</h3><p>Accounts supported</p></div>
+<div class="metric"><h3>Reduced Delays</h3><p>Improved reimbursement turnaround</p></div>
+<div class="metric"><h3>Auth & Appeals</h3><p>Status tracking & follow-ups</p></div>
 
-      <div class="metric">
-        <h3>50+</h3>
-        <p>Patients verified daily</p>
-      </div>
-
-      <div class="metric">
-        <h3>100+</h3>
-        <p>Claims handled weekly</p>
-      </div>
-
-      <div class="metric">
-        <h3>Multi-clinic</h3>
-        <p>Dental practice support</p>
-      </div>
-
-      <div class="metric">
-        <h3>US-based</h3>
-        <p>Dental offices supported</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-  <div class="container">
-
-    <div class="section-label">PROFESSIONAL EXPERIENCE</div>
-    <div class="section-title">Dental Revenue Cycle Experience</div>
-
-    <div class="grid grid-2">
-
-      <div class="exp-block">
-
-        <div class="exp-title">
-          Dental Insurance Verification Specialist
-        </div>
-
-        <div class="exp-company">
-          TOA Global | South Hills Dental Arts
-        </div>
-
-        <ul>
-          <li>Verified insurance eligibility and benefits for 50–80 patients daily</li>
-          <li>Reviewed coverage including deductibles, frequencies, and limitations</li>
-          <li>Supported multiple dental providers and locations</li>
-          <li>Reduced claim issues through accurate verification</li>
-        </ul>
-
-      </div>
-
-      <div class="exp-block">
-
-        <div class="exp-title">
-          Healthcare Executive
-        </div>
-
-        <div class="exp-company">
-          Firstsource Solutions
-        </div>
-
-        <ul>
-          <li>Handled eligibility verification and insurance coordination</li>
-          <li>Performed claims status, appeals, authorization checks and follow-ups</li>
-          <li>Communicated with insurance providers</li>
-          <li>Maintained accurate documentation</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 <!-- SYSTEMS -->
 
-<section id="tools">
+<section>
+<div class="container">
 
-  <div class="container">
+<div class="section-label">SYSTEMS & TOOLS</div>
+<div class="section-title">Healthcare & Communication Platforms</div>
 
-    <div class="section-label">SYSTEMS & TOOLS</div>
+<div class="grid grid-3">
 
-    <div class="section-title">
-      Dental Software & Platforms
-    </div>
+<div class="tool">Open Dental</div>
+<div class="tool">Dentrix</div>
+<div class="tool">Insurance Provider Portals</div>
+<div class="tool">EMR / EHR Systems</div>
+<div class="tool">Prior Authorization Portals</div>
+<div class="tool">Claims Management Systems</div>
+<div class="tool">Salesforce CRM</div>
+<div class="tool">Google Workspace</div>
+<div class="tool">Adit</div>
 
-    <div class="grid grid-3">
+<div class="tool">Genesys Cloud (Call Management)</div>
+<div class="tool">Inbound & Outbound Call Systems</div>
+<div class="tool">Healthcare Provider Support Systems</div>
 
-      <div class="tool">Open Dental</div>
-      <div class="tool">Dentrix</div>
-      <div class="tool">Insurance Websites</div>
-      <div class="tool">Google Workspace</div>
-      <div class="tool">Adit</div>
-      <div class="tool">Salesforce</div>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact">
-  <div class="container">
-    <div class="section-label">CONTACT</div>
-    <div class="section-title">Let's Work Together</div>
+<div class="container">
 
-    <p class="section-description">
-      Available for remote dental insurance verification and billing support roles.
-    </p>
+<div class="section-label">CONTACT</div>
+<div class="section-title">Let's Work Together</div>
 
-    <div style="text-align:center;margin-top:30px; display:flex; justify-content:center; gap:20px;">
-      <!-- Email -->
-      <a href="mailto:erwinjade24@gmail.com">
-        <img src="icon/gmail.png" alt="Email" style="width:40px; height:40px;">
-      </a>
+<p class="section-description">
+Available for remote healthcare insurance verification, claims support, and revenue cycle roles.
+</p>
 
-      <!-- WhatsApp -->
-      <a href="tel:+639243733050">
-        <img src="icon/whatsapp.png" alt="WhatsApp" style="width:40px; height:40px;">
-      </a>
+<div class="contact-icons">
 
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/zcxwin" target="_blank">
-        <img src="icon/linkedin.png" alt="LinkedIn" style="width:40px; height:40px;">
-      </a>
-    </div>
-  </div>
+<a href="mailto:erwinjade24@gmail.com">
+<img src="icon/gmail.png">
+</a>
+
+<a href="tel:+639243733050">
+<img src="icon/whatsapp.png">
+</a>
+
+<a href="https://linkedin.com/in/zcxwin" target="_blank">
+<img src="icon/linkedin.png">
+</a>
+
+</div>
+
+</div>
 </section>
 
 <!-- FOOTER -->
 
 <div class="footer">
-  <p style="font-weight:600;font-size:18px;">Erwin Bolhano</p>
-  <p style="margin-top:10px;">Dental Insurance Verification & Billing Support Specialist</p>
-  <p style="margin-top:10px;">Philippines | Remote</p>
-  <p style="margin-top:15px;font-size:14px;opacity:.8;">© 2026 Erwin Bolhano. All rights reserved.</p>
+<p style="font-weight:600;font-size:18px;">Erwin Bolhano</p>
+<p>Healthcare Insurance & Revenue Cycle Specialist</p>
+<p>Philippines | Remote</p>
+<p style="margin-top:10px;font-size:14px;opacity:.7;">© 2026 Erwin Bolhano</p>
 </div>
 
 </body>
