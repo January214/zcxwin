@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Erwin Bolhano | Healthcare Insurance & Revenue Cycle Specialist</title>
+<title>Erwin Bolhano | Healthcare Insurance Verification & Revenue Cycle Support Specialist</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
@@ -13,14 +13,16 @@
 :root{
   --primary:#1f4f59;
   --accent:#2c7a7b;
-  --light:#f4f7f9;
-  --lighter:#f8fafc;
   --text:#111827;
   --muted:#6b7280;
   --border:#e5e7eb;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:Inter,sans-serif;
@@ -35,7 +37,9 @@ body{
   padding:0 20px;
 }
 
-section{padding:90px 0;}
+section{
+  padding:90px 0;
+}
 
 /* NAVBAR */
 
@@ -90,13 +94,6 @@ section{padding:90px 0;}
   background:linear-gradient(to right,#f8fafc,#eef3f5);
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:40px;
-  align-items:center;
-}
-
 .badges{
   display:flex;
   gap:10px;
@@ -110,7 +107,6 @@ section{padding:90px 0;}
   padding:6px 14px;
   border-radius:999px;
   font-size:13px;
-  font-weight:500;
 }
 
 .hero h1{
@@ -121,11 +117,9 @@ section{padding:90px 0;}
 
 .hero-summary{
   background:#eef3f5;
-  padding:18px 20px;
+  padding:18px;
   border-radius:12px;
   color:var(--muted);
-  margin-top:20px;
-  font-size:15px;
   border:1px solid var(--border);
 }
 
@@ -135,19 +129,17 @@ section{padding:90px 0;}
   padding:12px 22px;
   border-radius:8px;
   text-decoration:none;
-  font-weight:600;
   display:inline-block;
   margin-top:20px;
 }
 
-/* TITLES */
+/* SECTIONS */
 
 .section-label{
   text-align:center;
   color:var(--primary);
   font-size:13px;
   letter-spacing:2px;
-  margin-bottom:10px;
 }
 
 .section-title{
@@ -184,11 +176,6 @@ section{padding:90px 0;}
   text-align:center;
 }
 
-.metric h3{
-  font-size:22px;
-  color:var(--primary);
-}
-
 /* EXPERIENCE */
 
 .exp-block{
@@ -214,7 +201,7 @@ section{padding:90px 0;}
   color:var(--muted);
 }
 
-/* TOOL CARDS */
+/* TOOLS */
 
 .tool{
   background:white;
@@ -222,7 +209,6 @@ section{padding:90px 0;}
   border-radius:10px;
   border:1px solid var(--border);
   text-align:center;
-  font-weight:500;
 }
 
 /* CONTACT */
@@ -236,12 +222,6 @@ section{padding:90px 0;}
 
 .contact-icons img{
   width:45px;
-  height:45px;
-  transition:.2s;
-}
-
-.contact-icons img:hover{
-  transform:scale(1.1);
 }
 
 /* FOOTER */
@@ -251,52 +231,71 @@ section{padding:90px 0;}
   color:white;
   text-align:center;
   padding:40px;
-  margin-top:40px;
 }
 
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;}
-  .grid-4,.grid-3,.grid-2{grid-template-columns:1fr;}
+  .grid-4,.grid-3,.grid-2{
+    grid-template-columns:1fr;
+  }
 }
 
 </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
+
+<div class="navbar">
+  <div class="nav-inner">
+
+    <div class="logo">Erwin Bolhano</div>
+
+    <div class="nav-menu">
+      <a href="#metrics">Metrics</a>
+      <a href="#experience">Experience</a>
+      <a href="#tools">Systems</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a href="mailto:erwinjade24@gmail.com" class="connect-btn">
+      Contact Me
+    </a>
+
+  </div>
+</div>
+
 <!-- HERO -->
 
 <section class="hero">
-<div class="container hero-grid">
-<div>
+<div class="container">
 
 <div class="badges">
 <span class="badge">Healthcare Insurance Specialist</span>
-<span class="badge">Medical & Dental Revenue Cycle</span>
-<span class="badge">Claims & Authorization Specialist</span>
+<span class="badge">Revenue Cycle Support</span>
+<span class="badge">Claims & Authorization Support</span>
 <span class="badge">HIPAA Compliant</span>
 </div>
 
 <h1>
-Healthcare Insurance Verification & Revenue Cycle Specialist
+Healthcare Insurance Verification & Revenue Cycle Support Specialist
 </h1>
 
 <p>
-Supporting medical and dental providers with eligibility verification, claims follow-up, prior authorization tracking, and insurance coordination to improve revenue cycle efficiency.
+Supporting US medical and dental providers with insurance eligibility verification, claims status follow-up, prior authorization tracking, and provider insurance coordination.
 </p>
 
 <div class="hero-summary">
-Nearly 2 years of experience supporting US healthcare providers. Skilled in high-volume inbound calls, eligibility verification, claims tracking, prior authorization, appeals support, and insurance communication.
+Nearly 2 years of experience supporting US healthcare providers. Skilled in eligibility verification, claims support, authorization tracking, and high-volume insurance communication using healthcare systems and call platforms.
 </div>
 
 <a href="#" class="btn">Download Resume</a>
 
 </div>
-</div>
 </section>
 
 <!-- METRICS -->
 
-<section>
+<section id="metrics">
 <div class="container">
 
 <div class="section-label">PERFORMANCE METRICS</div>
@@ -304,22 +303,67 @@ Nearly 2 years of experience supporting US healthcare providers. Skilled in high
 
 <div class="grid grid-4">
 
-<div class="metric"><h3>50–80+</h3><p>Patients verified daily</p></div>
-<div class="metric"><h3>200+</h3><p>Claims followed up weekly</p></div>
-<div class="metric"><h3>60–100</h3><p>Inbound calls handled daily</p></div>
-<div class="metric"><h3>High Accuracy</h3><p>HIPAA-compliant documentation</p></div>
-<div class="metric"><h3>Multi-Clinic</h3><p>Providers supported remotely</p></div>
-<div class="metric"><h3>US Healthcare</h3><p>Accounts supported</p></div>
-<div class="metric"><h3>Reduced Delays</h3><p>Improved reimbursement turnaround</p></div>
-<div class="metric"><h3>Auth & Appeals</h3><p>Status tracking & follow-ups</p></div>
+<div class="metric">50–80+ Patients verified daily</div>
+<div class="metric">200+ Claims followed up weekly</div>
+<div class="metric">60–100 Inbound calls handled daily</div>
+<div class="metric">High accuracy HIPAA-compliant documentation</div>
+<div class="metric">Multi-clinic provider support</div>
+<div class="metric">US healthcare accounts supported</div>
+<div class="metric">Reduced claim processing delays</div>
+<div class="metric">Prior auth & appeals status tracking</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+<div class="container">
+
+<div class="section-label">EXPERIENCE</div>
+<div class="section-title">Healthcare Insurance & Claims Support Experience</div>
+
+<div class="grid grid-2">
+
+<div class="exp-block">
+
+<div class="exp-title">Dental Insurance Verification Specialist</div>
+<div class="exp-company">TOA Global | Supporting US Dental Practices</div>
+
+<ul>
+<li>Verified eligibility and benefits for 50–80+ patients daily</li>
+<li>Reviewed deductibles, frequencies, limitations, and coverage details</li>
+<li>Prevented claim delays through accurate insurance verification</li>
+<li>Supported multiple providers and clinics remotely</li>
+<li>Used Open Dental, Dentrix, and insurance portals</li>
+</ul>
+
+</div>
+
+<div class="exp-block">
+
+<div class="exp-title">Healthcare Customer Service Representative</div>
+<div class="exp-company">Firstsource Solutions | US Healthcare Account</div>
+
+<ul>
+<li>Handled 60–100 inbound calls daily from providers and insurance companies</li>
+<li>Checked claims status, prior authorization status, and appeals status</li>
+<li>Assisted providers with benefits and eligibility verification</li>
+<li>Documented insurance information accurately in system</li>
+<li>Used Genesys Cloud and healthcare support systems</li>
+</ul>
+
+</div>
 
 </div>
 </div>
 </section>
 
-<!-- SYSTEMS -->
+<!-- TOOLS -->
 
-<section>
+<section id="tools">
 <div class="container">
 
 <div class="section-label">SYSTEMS & TOOLS</div>
@@ -331,17 +375,14 @@ Nearly 2 years of experience supporting US healthcare providers. Skilled in high
 <div class="tool">Dentrix</div>
 <div class="tool">Insurance Provider Portals</div>
 <div class="tool">EMR / EHR Systems</div>
-<div class="tool">Prior Authorization Portals</div>
-<div class="tool">Claims Management Systems</div>
 <div class="tool">Salesforce CRM</div>
 <div class="tool">Google Workspace</div>
 <div class="tool">Adit</div>
-
-<div class="tool">Genesys Cloud (Call Management)</div>
-<div class="tool">Inbound & Outbound Call Systems</div>
-<div class="tool">Healthcare Provider Support Systems</div>
+<div class="tool">Genesys Cloud</div>
+<div class="tool">Inbound Call Systems</div>
 
 </div>
+
 </div>
 </section>
 
@@ -354,7 +395,7 @@ Nearly 2 years of experience supporting US healthcare providers. Skilled in high
 <div class="section-title">Let's Work Together</div>
 
 <p class="section-description">
-Available for remote healthcare insurance verification, claims support, and revenue cycle roles.
+Available for healthcare insurance verification and revenue cycle support roles.
 </p>
 
 <div class="contact-icons">
@@ -379,10 +420,9 @@ Available for remote healthcare insurance verification, claims support, and reve
 <!-- FOOTER -->
 
 <div class="footer">
-<p style="font-weight:600;font-size:18px;">Erwin Bolhano</p>
-<p>Healthcare Insurance & Revenue Cycle Specialist</p>
+<p><strong>Erwin Bolhano</strong></p>
+<p>Healthcare Insurance Verification & Revenue Cycle Support Specialist</p>
 <p>Philippines | Remote</p>
-<p style="margin-top:10px;font-size:14px;opacity:.7;">© 2026 Erwin Bolhano</p>
 </div>
 
 </body>
